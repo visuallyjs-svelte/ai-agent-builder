@@ -1,0 +1,892 @@
+[
+  {
+    "provider": "GitHub",
+    "triggers": [
+      {
+        "id": "new_issue",
+        "name": "New Issue",
+        "desc": "Triggers when a new issue is created."
+      },
+      {
+        "id": "pull_request_opened",
+        "name": "Pull Request Opened",
+        "desc": "Triggers when a new pull request is opened."
+      },
+      {
+        "id": "new_review_request",
+        "name": "New Review Request",
+        "desc": "Triggers when a new review request is sent."
+      }
+    ]
+  },
+  {
+    "provider": "Slack",
+    "triggers": [
+      {
+        "id": "new_public_message",
+        "name": "New Public Message Posted Anywhere",
+        "desc": "Triggers when a new message is posted to any public channel."
+      },
+      {
+        "id": "new_channel_message",
+        "name": "New Message Posted to Channel",
+        "desc": "Triggers when a new message is posted to a specific channel you choose."
+      },
+      {
+        "id": "new_file",
+        "name": "New File",
+        "desc": "Triggers when a new file is uploaded to your workspace."
+      },
+      {
+        "id": "new_mention",
+        "name": "New Mention",
+        "desc": "Triggers when a username or highlight word is mentioned in a public channel."
+      },
+      {
+        "id": "new_reaction",
+        "name": "New Reaction Added",
+        "desc": "Triggers when a reaction (emoji) is added to a message in a public channel."
+      }
+    ]
+  },
+  {
+    "provider": "Salesforce",
+    "triggers": [
+      {
+        "id": "new_lead",
+        "name": "New Lead",
+        "desc": "Triggers when a new lead is created in Salesforce."
+      },
+      {
+        "id": "new_contact",
+        "name": "New Contact",
+        "desc": "Triggers when a new contact is created in Salesforce."
+      },
+      {
+        "id": "updated_field_on_record",
+        "name": "Updated Field on Record",
+        "desc": "Triggers when a specified field is updated on any record of a specified Salesforce object (e.g., Contact, Lead, Opportunity)."
+      },
+      {
+        "id": "new_case_attachment",
+        "name": "New Case Attachment",
+        "desc": "Triggers when a new attachment is added to a case."
+      },
+      {
+        "id": "new_outbound_message",
+        "name": "New Outbound Message",
+        "desc": "Triggers when a new outbound message is received in Salesforce."
+      }
+    ]
+  },
+  {
+    "provider": "Google Calendar",
+    "triggers": [
+      {
+        "id": "new_event",
+        "name": "New Event",
+        "desc": "Triggers when a new event is created on the calendar."
+      },
+      {
+        "id": "event_start",
+        "name": "Event Start",
+        "desc": "Triggers at a specified time before an event starts."
+      },
+      {
+        "id": "new_or_updated_event",
+        "name": "New or Updated Event",
+        "desc": "Triggers when an event is created or updated."
+      },
+      {
+        "id": "new_calendar",
+        "name": "New Calendar",
+        "desc": "Triggers when a new calendar is created."
+      }
+    ]
+  },
+  {
+    "provider": "Gmail",
+    "triggers": [
+      {
+        "id": "new_email",
+        "name": "New Email",
+        "desc": "Triggers when a new email is received."
+      },
+      {
+        "id": "new_labeled_email",
+        "name": "New Labeled Email",
+        "desc": "Triggers when you label an email."
+      },
+      {
+        "id": "new_email_matching_search",
+        "name": "New Email Matching Search",
+        "desc": "Triggers when a new email matches a search string you provide."
+      },
+      {
+        "id": "new_attachment",
+        "name": "New Attachment",
+        "desc": "Triggers when you receive a new attachment."
+      }
+    ]
+  },
+  {
+    "provider": "Trello",
+    "triggers": [
+      {
+        "id": "new_card",
+        "name": "New Card",
+        "desc": "Triggers when a new card is added to a board."
+      },
+      {
+        "id": "card_moved_to_list",
+        "name": "Card Moved to List",
+        "desc": "Triggers when a card is moved to a specific list on a board."
+      },
+      {
+        "id": "card_updated",
+        "name": "Card Updated",
+        "desc": "Triggers when a card is updated, including changes to name, description, due date, or position."
+      },
+      {
+        "id": "new_list",
+        "name": "New List",
+        "desc": "Triggers when a new list is created on a board."
+      },
+      {
+        "id": "new_board",
+        "name": "New Board",
+        "desc": "Triggers when a new board is created."
+      },
+      {
+        "id": "new_member_on_card",
+        "name": "New Member on Card",
+        "desc": "Triggers when a new member is added to a card."
+      },
+      {
+        "id": "new_label_on_card",
+        "name": "New Label on Card",
+        "desc": "Triggers when a label is added to a card."
+      },
+      {
+        "id": "checklist_item_completed",
+        "name": "Checklist Item Completed",
+        "desc": "Triggers when a checklist item is marked as complete on a card."
+      }
+    ]
+  },
+  {
+    "provider": "Notion",
+    "triggers": [
+      {
+        "id": "new_database_item",
+        "name": "New Database Item",
+        "desc": "Triggers when a new item is created in a database."
+      },
+      {
+        "id": "updated_database_item",
+        "name": "Updated Database Item",
+        "desc": "Triggers when an existing item in a database is updated."
+      },
+      {
+        "id": "new_comment",
+        "name": "New Comment",
+        "desc": "Triggers when a new comment is added to a page or database item."
+      },
+      {
+        "id": "updated_page",
+        "name": "Updated Page",
+        "desc": "Triggers when a page is updated."
+      }
+    ]
+  },
+  {
+    "provider": "Asana",
+    "triggers": [
+      {
+        "id": "new_task",
+        "name": "New Task",
+        "desc": "Triggers when a new task is created in a project."
+      },
+      {
+        "id": "completed_task",
+        "name": "Completed Task",
+        "desc": "Triggers when a task is marked as completed."
+      },
+      {
+        "id": "updated_task",
+        "name": "Updated Task",
+        "desc": "Triggers when a task is updated."
+      },
+      {
+        "id": "new_subtask",
+        "name": "New Subtask",
+        "desc": "Triggers when a new subtask is added to a task."
+      },
+      {
+        "id": "task_assigned",
+        "name": "Task Assigned",
+        "desc": "Triggers when a task is assigned to a user."
+      }
+    ]
+  },
+  {
+    "provider": "HubSpot",
+    "triggers": [
+      {
+        "id": "new_contact",
+        "name": "New Contact",
+        "desc": "Triggers when a new contact is added to your HubSpot account."
+      },
+      {
+        "id": "new_deal",
+        "name": "New Deal",
+        "desc": "Triggers when a new deal is created in your HubSpot account."
+      },
+      {
+        "id": "new_email_event",
+        "name": "New Email Event",
+        "desc": "Triggers when a new email event occurs in your HubSpot account."
+      },
+      {
+        "id": "new_form_submission",
+        "name": "New Form Submission",
+        "desc": "Triggers when a new form submission is received in HubSpot."
+      },
+      {
+        "id": "new_ticket",
+        "name": "New Ticket",
+        "desc": "Triggers when a new ticket is created in your HubSpot account."
+      }
+    ]
+  },
+  {
+    "provider": "Zendesk",
+    "triggers": [
+      {
+        "id": "new_ticket",
+        "name": "New Ticket",
+        "desc": "Triggers when a new ticket is created in Zendesk."
+      },
+      {
+        "id": "updated_ticket",
+        "name": "Updated Ticket",
+        "desc": "Triggers when an existing ticket is updated."
+      },
+      {
+        "id": "new_user",
+        "name": "New User",
+        "desc": "Triggers when a new user is added to Zendesk."
+      },
+      {
+        "id": "new_organization",
+        "name": "New Organization",
+        "desc": "Triggers when a new organization is created."
+      },
+      {
+        "id": "new_ticket_comment",
+        "name": "New Ticket Comment",
+        "desc": "Triggers when a new comment is added to a ticket."
+      }
+    ]
+  },
+  {
+    "provider": "Zoom",
+    "triggers": [
+      {
+        "id": "new_meeting",
+        "name": "New Meeting",
+        "desc": "Triggers when a new meeting or webinar is created."
+      },
+      {
+        "id": "meeting_ended",
+        "name": "Meeting Ended",
+        "desc": "Triggers when a meeting host ends the meeting."
+      },
+      {
+        "id": "new_participant_joined",
+        "name": "New Participant Joined",
+        "desc": "Triggers when a new participant joins a meeting or webinar."
+      },
+      {
+        "id": "new_cloud_recording",
+        "name": "New Cloud Recording",
+        "desc": "Triggers when a new cloud recording is completed for a meeting or webinar."
+      },
+      {
+        "id": "new_meeting_registrant",
+        "name": "New Meeting Registrant",
+        "desc": "Triggers when a new registrant is added to a meeting."
+      }
+    ]
+  },
+  {
+    "provider": "Microsoft Teams",
+    "triggers": [
+      {
+        "id": "new_channel_message",
+        "name": "New Channel Message",
+        "desc": "Triggers when a new message is posted to a channel."
+      },
+      {
+        "id": "new_chat_message",
+        "name": "New Chat Message",
+        "desc": "Triggers when a new message is sent in a private chat."
+      },
+      {
+        "id": "new_team_created",
+        "name": "New Team Created",
+        "desc": "Triggers when a new team is created in Microsoft Teams."
+      },
+      {
+        "id": "new_channel_created",
+        "name": "New Channel Created",
+        "desc": "Triggers when a new channel is created within a team."
+      },
+      {
+        "id": "mention_in_channel",
+        "name": "Mention in Channel",
+        "desc": "Triggers when someone mentions you in a channel message."
+      }
+    ]
+  },
+  {
+    "provider": "Google Drive",
+    "triggers": [
+      {
+        "id": "new_file",
+        "name": "New File",
+        "desc": "Triggers when a new file is added to any folder."
+      },
+      {
+        "id": "new_file_in_folder",
+        "name": "New File in Folder",
+        "desc": "Triggers when a new file is added to a specific folder."
+      },
+      {
+        "id": "file_updated",
+        "name": "File Updated",
+        "desc": "Triggers when a file is updated in Google Drive."
+      },
+      {
+        "id": "new_folder",
+        "name": "New Folder",
+        "desc": "Triggers when a new folder is created."
+      },
+      {
+        "id": "new_shared_file",
+        "name": "New Shared File",
+        "desc": "Triggers when a file is shared with you."
+      }
+    ]
+  },
+  {
+    "provider": "Airtable",
+    "triggers": [
+      {
+        "id": "new_record",
+        "name": "New Record",
+        "desc": "Triggers when a new record is created in a table."
+      },
+      {
+        "id": "new_record_in_view",
+        "name": "New Record in View",
+        "desc": "Triggers when a new record enters a specified view."
+      },
+      {
+        "id": "record_updated",
+        "name": "Record Updated",
+        "desc": "Triggers when a record is updated in a table."
+      },
+      {
+        "id": "record_matches_conditions",
+        "name": "Record Matches Conditions",
+        "desc": "Triggers when a record matches specified conditions."
+      },
+      {
+        "id": "button_clicked",
+        "name": "Button Clicked",
+        "desc": "Triggers when a button is clicked in an interface."
+      }
+    ]
+  },
+  {
+    "provider": "Jira",
+    "triggers": [
+      {
+        "id": "new_issue",
+        "name": "New Issue",
+        "desc": "Triggers when a new issue is created."
+      },
+      {
+        "id": "issue_updated",
+        "name": "Issue Updated",
+        "desc": "Triggers when an existing issue is updated."
+      },
+      {
+        "id": "issue_transitioned",
+        "name": "Issue Transitioned",
+        "desc": "Triggers when an issue transitions from one status to another."
+      },
+      {
+        "id": "new_comment",
+        "name": "New Comment",
+        "desc": "Triggers when a new comment is added to an issue."
+      },
+      {
+        "id": "issue_assigned",
+        "name": "Issue Assigned",
+        "desc": "Triggers when an issue is assigned to someone."
+      }
+    ]
+  },
+  {
+    "provider": "Intercom",
+    "triggers": [
+      {
+        "id": "new_conversation",
+        "name": "New Conversation",
+        "desc": "Triggers when a new conversation is created in Intercom."
+      },
+      {
+        "id": "new_user",
+        "name": "New User",
+        "desc": "Triggers when a new user is added to your Intercom workspace."
+      },
+      {
+        "id": "new_lead",
+        "name": "New Lead",
+        "desc": "Triggers when a new lead is created in Intercom."
+      },
+      {
+        "id": "conversation_assigned",
+        "name": "Conversation Assigned",
+        "desc": "Triggers when a conversation is assigned to a teammate."
+      },
+      {
+        "id": "conversation_tagged",
+        "name": "Conversation Tagged",
+        "desc": "Triggers when a tag is added to a conversation."
+      }
+    ]
+  },
+  {
+    "provider": "QuickBooks",
+    "triggers": [
+      {
+        "id": "new_invoice",
+        "name": "New Invoice",
+        "desc": "Triggers when a new invoice is created."
+      },
+      {
+        "id": "new_customer",
+        "name": "New Customer",
+        "desc": "Triggers when a new customer is added."
+      },
+      {
+        "id": "new_payment",
+        "name": "New Payment",
+        "desc": "Triggers when a payment is received."
+      },
+      {
+        "id": "invoice_updated",
+        "name": "Invoice Updated",
+        "desc": "Triggers when an existing invoice is updated."
+      },
+      {
+        "id": "new_bill",
+        "name": "New Bill",
+        "desc": "Triggers when a new bill is created."
+      }
+    ]
+  },
+  {
+    "provider": "Xero",
+    "triggers": [
+      {
+        "id": "new_invoice",
+        "name": "New Invoice",
+        "desc": "Triggers when a new invoice is created in Xero."
+      },
+      {
+        "id": "new_contact",
+        "name": "New Contact",
+        "desc": "Triggers when a new contact is added."
+      },
+      {
+        "id": "new_payment",
+        "name": "New Payment",
+        "desc": "Triggers when a new payment is made or received."
+      },
+      {
+        "id": "invoice_updated",
+        "name": "Invoice Updated",
+        "desc": "Triggers when an existing invoice is updated."
+      },
+      {
+        "id": "new_credit_note",
+        "name": "New Credit Note",
+        "desc": "Triggers when a new credit note is created."
+      }
+    ]
+  },
+  {
+    "provider": "ClickUp",
+    "triggers": [
+      {
+        "id": "new_task",
+        "name": "New Task",
+        "desc": "Triggers when a new task is created in ClickUp."
+      },
+      {
+        "id": "task_updated",
+        "name": "Task Updated",
+        "desc": "Triggers when an existing task is updated."
+      },
+      {
+        "id": "task_completed",
+        "name": "Task Completed",
+        "desc": "Triggers when a task is marked as complete."
+      },
+      {
+        "id": "new_comment",
+        "name": "New Comment",
+        "desc": "Triggers when a new comment is added to a task."
+      },
+      {
+        "id": "task_due_date_changed",
+        "name": "Task Due Date Changed",
+        "desc": "Triggers when a task's due date is changed."
+      }
+    ]
+  },
+  {
+    "provider": "Freshdesk",
+    "triggers": [
+      {
+        "id": "new_ticket",
+        "name": "New Ticket",
+        "desc": "Triggers when a new support ticket is created."
+      },
+      {
+        "id": "updated_ticket",
+        "name": "Updated Ticket",
+        "desc": "Triggers when a ticket is updated."
+      },
+      {
+        "id": "new_contact",
+        "name": "New Contact",
+        "desc": "Triggers when a new contact is added to Freshdesk."
+      },
+      {
+        "id": "ticket_status_changed",
+        "name": "Ticket Status Changed",
+        "desc": "Triggers when the status of a ticket changes."
+      },
+      {
+        "id": "new_note",
+        "name": "New Note",
+        "desc": "Triggers when a note is added to a ticket."
+      }
+    ]
+  },
+  {
+    "provider": "Google Sheets",
+    "triggers": [
+      {
+        "id": "new_spreadsheet_row",
+        "name": "New Spreadsheet Row",
+        "desc": "Triggers when a new row is added to a spreadsheet."
+      },
+      {
+        "id": "updated_spreadsheet_row",
+        "name": "Updated Spreadsheet Row",
+        "desc": "Triggers when an existing row is updated."
+      },
+      {
+        "id": "new_worksheet",
+        "name": "New Worksheet",
+        "desc": "Triggers when a new worksheet is created in a spreadsheet."
+      },
+      {
+        "id": "new_or_updated_spreadsheet_row",
+        "name": "New or Updated Spreadsheet Row",
+        "desc": "Triggers when a new row is added or an existing row is updated."
+      },
+      {
+        "id": "new_spreadsheet",
+        "name": "New Spreadsheet",
+        "desc": "Triggers when a new spreadsheet is created."
+      }
+    ]
+  },
+  {
+    "provider": "Microsoft Excel",
+    "triggers": [
+      {
+        "id": "new_row",
+        "name": "New Row",
+        "desc": "Triggers when a new row is added to a worksheet."
+      },
+      {
+        "id": "updated_row",
+        "name": "Updated Row",
+        "desc": "Triggers when an existing row is updated in a worksheet."
+      },
+      {
+        "id": "new_worksheet",
+        "name": "New Worksheet",
+        "desc": "Triggers when a new worksheet is created in a workbook."
+      },
+      {
+        "id": "new_workbook",
+        "name": "New Workbook",
+        "desc": "Triggers when a new workbook is created."
+      },
+      {
+        "id": "row_added_or_updated",
+        "name": "New or Updated Row",
+        "desc": "Triggers when a row is added or updated in a worksheet."
+      }
+    ]
+  },
+  {
+    "provider": "Calendly",
+    "triggers": [
+      {
+        "id": "invitee_created",
+        "name": "Invitee Created",
+        "desc": "Triggers when a new invitee schedules an event."
+      },
+      {
+        "id": "invitee_canceled",
+        "name": "Invitee Canceled",
+        "desc": "Triggers when an invitee cancels a scheduled event."
+      },
+      {
+        "id": "event_type_created",
+        "name": "Event Type Created",
+        "desc": "Triggers when a new event type is created in Calendly."
+      },
+      {
+        "id": "event_type_updated",
+        "name": "Event Type Updated",
+        "desc": "Triggers when an existing event type is updated."
+      },
+      {
+        "id": "routing_form_submitted",
+        "name": "Routing Form Submitted",
+        "desc": "Triggers when a user submits a routing form."
+      }
+    ]
+  },
+  {
+    "provider": "DocuSign",
+    "triggers": [
+      {
+        "id": "envelope_sent",
+        "name": "Envelope Sent",
+        "desc": "Triggers when an envelope is sent for signature."
+      },
+      {
+        "id": "envelope_completed",
+        "name": "Envelope Completed",
+        "desc": "Triggers when an envelope is signed and completed."
+      },
+      {
+        "id": "envelope_declined",
+        "name": "Envelope Declined",
+        "desc": "Triggers when a recipient declines to sign an envelope."
+      },
+      {
+        "id": "recipient_viewed",
+        "name": "Recipient Viewed Document",
+        "desc": "Triggers when a recipient opens and views the document."
+      },
+      {
+        "id": "new_document_uploaded",
+        "name": "New Document Uploaded",
+        "desc": "Triggers when a new document is uploaded to DocuSign."
+      }
+    ]
+  },
+  {
+    "provider": "Stripe",
+    "triggers": [
+      {
+        "id": "new_charge",
+        "name": "New Charge",
+        "desc": "Triggers when a new charge is created."
+      },
+      {
+        "id": "payment_successful",
+        "name": "Payment Successful",
+        "desc": "Triggers when a payment is successfully completed."
+      },
+      {
+        "id": "new_customer",
+        "name": "New Customer",
+        "desc": "Triggers when a new customer is added."
+      },
+      {
+        "id": "subscription_created",
+        "name": "Subscription Created",
+        "desc": "Triggers when a customer subscribes to a plan."
+      },
+      {
+        "id": "invoice_paid",
+        "name": "Invoice Paid",
+        "desc": "Triggers when an invoice is successfully paid."
+      }
+    ]
+  },
+  {
+    "provider": "Shopify",
+    "triggers": [
+      {
+        "id": "new_order",
+        "name": "New Order",
+        "desc": "Triggers when a new order is placed."
+      },
+      {
+        "id": "order_fulfilled",
+        "name": "Order Fulfilled",
+        "desc": "Triggers when an order is marked as fulfilled."
+      },
+      {
+        "id": "new_customer",
+        "name": "New Customer",
+        "desc": "Triggers when a new customer is added to your store."
+      },
+      {
+        "id": "product_added",
+        "name": "New Product",
+        "desc": "Triggers when a new product is added to your Shopify store."
+      },
+      {
+        "id": "cart_abandoned",
+        "name": "Abandoned Cart",
+        "desc": "Triggers when a cart is abandoned at checkout."
+      }
+    ]
+  },
+  {
+    "provider": "ZoomInfo",
+    "triggers": [
+      {
+        "id": "new_contact_match",
+        "name": "New Contact Match",
+        "desc": "Triggers when a new contact matches your saved search criteria."
+      },
+      {
+        "id": "contact_updated",
+        "name": "Contact Updated",
+        "desc": "Triggers when a tracked contact's information is updated."
+      },
+      {
+        "id": "new_company_match",
+        "name": "New Company Match",
+        "desc": "Triggers when a company matches your search filters or watchlist."
+      },
+      {
+        "id": "company_updated",
+        "name": "Company Updated",
+        "desc": "Triggers when company information is updated."
+      },
+      {
+        "id": "intent_signal_detected",
+        "name": "Intent Signal Detected",
+        "desc": "Triggers when buying intent signals are detected for a company in your list."
+      }
+    ]
+  },
+  {
+    "provider": "Twilio",
+    "triggers": [
+      {
+        "id": "new_sms",
+        "name": "New SMS Received",
+        "desc": "Triggers when a new SMS message is received on a Twilio number."
+      },
+      {
+        "id": "sms_sent",
+        "name": "SMS Sent",
+        "desc": "Triggers when an SMS message is successfully sent."
+      },
+      {
+        "id": "new_call",
+        "name": "New Call Received",
+        "desc": "Triggers when a call is received on a Twilio number."
+      },
+      {
+        "id": "call_ended",
+        "name": "Call Ended",
+        "desc": "Triggers when a call ends."
+      },
+      {
+        "id": "message_status_updated",
+        "name": "Message Status Updated",
+        "desc": "Triggers when the status of a message (sent/failed/delivered) changes."
+      }
+    ]
+  },
+  {
+    "provider": "Monday.com",
+    "triggers": [
+      {
+        "id": "new_item",
+        "name": "New Item",
+        "desc": "Triggers when a new item is created on a board."
+      },
+      {
+        "id": "updated_item",
+        "name": "Updated Item",
+        "desc": "Triggers when an existing item is updated."
+      },
+      {
+        "id": "new_column_value",
+        "name": "New Column Value",
+        "desc": "Triggers when a specific column value is updated in an item."
+      },
+      {
+        "id": "item_moved",
+        "name": "Item Moved",
+        "desc": "Triggers when an item is moved to another group or board."
+      },
+      {
+        "id": "new_board",
+        "name": "New Board",
+        "desc": "Triggers when a new board is created."
+      }
+    ]
+  },
+  {
+    "provider": "Box",
+    "triggers": [
+      {
+        "id": "new_file",
+        "name": "New File",
+        "desc": "Triggers when a new file is uploaded to any folder."
+      },
+      {
+        "id": "new_folder",
+        "name": "New Folder",
+        "desc": "Triggers when a new folder is created."
+      },
+      {
+        "id": "file_updated",
+        "name": "File Updated",
+        "desc": "Triggers when an existing file is updated."
+      },
+      {
+        "id": "file_deleted",
+        "name": "File Deleted",
+        "desc": "Triggers when a file is deleted from a folder."
+      },
+      {
+        "id": "new_comment",
+        "name": "New Comment",
+        "desc": "Triggers when a new comment is added to a file."
+      }
+    ]
+  }
+]

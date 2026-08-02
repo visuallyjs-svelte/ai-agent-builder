@@ -1,0 +1,9 @@
+
+@import "@visuallyjs/browser-ui/css/visuallyjs.css";
+
+@import "./ai-agent-builder.css";
+
+.vjs-surface {
+    width:100%;
+    height:100%;
+}

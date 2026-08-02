@@ -1,0 +1,159 @@
+{
+  "nodes": [
+    {
+      "id": "2",
+      "name": "Create Issue",
+      "summary": "Create a new issue in GitHub for a reported bug.",
+      "type": "trigger",
+      "provider": "GitHub",
+      "trigger": "create_issue"
+    },
+    {
+      "id": "3",
+      "name": "Send Slack Notification",
+      "summary": "Notify the engineering team about the new issue.",
+      "type": "send_channel_message",
+      "provider": "Slack"
+    },
+    {
+      "id": "decision-1",
+      "name": "Priority?",
+      "summary": "What is the priority of this issue?",
+      "type": "decision",
+      "conditions": [
+        {
+          "id": "1",
+          "label": "High Priority"
+        },
+        {
+          "id": "2",
+          "label": "Low Priority"
+        },
+        {
+          "id": "3",
+          "label": "Other Priority"
+        },
+        {
+          "id": "4",
+          "label": "Other Priority"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Draft Reply Email",
+      "summary": "Draft a response to the customer who reported the bug.",
+      "type": "draft_email",
+      "provider": "Gmail"
+    },
+    {
+      "id": "5",
+      "name": "Create Pull Request",
+      "summary": "Create a PR to fix the reported issue.",
+      "type": "create_pull_request",
+      "provider": "GitHub"
+    },
+    {
+      "id": "urgent-ping",
+      "name": "Urgent Team Ping",
+      "summary": "Send an urgent notification to the lead developer.",
+      "type": "send_channel_message",
+      "provider": "Slack"
+    },
+    {
+      "id": "decision-2",
+      "name": "Automated Fix Available?",
+      "summary": "Can we apply an automated fix?",
+      "type": "decision",
+      "conditions": [
+        {
+          "id": "1",
+          "label": ""
+        },
+        {
+          "id": "2",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Merge Pull Request",
+      "summary": "Merge the PR once approved.",
+      "type": "merge_pull_request",
+      "provider": "GitHub"
+    },
+    {
+      "id": "7",
+      "name": "Comment on Issue",
+      "summary": "Add a comment to the GitHub issue that it has been fixed.",
+      "type": "comment_on_issue",
+      "provider": "GitHub"
+    },
+    {
+      "id": "8",
+      "name": "Send Confirmation Email",
+      "summary": "Send an email to the customer confirming the fix is live.",
+      "type": "send_email",
+      "provider": "Gmail"
+    },
+    {
+      "id": "9",
+      "name": "Close Issue",
+      "summary": "Close the GitHub issue.",
+      "type": "close_issue",
+      "provider": "GitHub"
+    },
+    {
+      "id": "placeholder-1",
+      "type": "placeholder"
+    },
+    {
+      "id": "placeholder-2",
+      "type": "placeholder"
+    },
+    {
+      "id": "placeholder-3",
+      "type": "placeholder"
+    },
+    {
+      "id": "10",
+      "type": "agent",
+      "name": "Agent",
+      "skills": [
+        { "provider": "GitHub", "id": "close_issue", "name": "Close Issue"}
+      ],
+      "conditions": [
+        {
+          "id": "1",
+          "label": ""
+        },
+        {
+          "id": "2",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "placeholder-4",
+      "type": "placeholder"
+    }
+  ],
+  "edges": [
+    { "source": "2", "target": "3" },
+    { "source": "3", "target": "decision-1" },
+    { "source": "decision-1.2", "target": "4" },
+    { "source": "decision-1.1", "target": "urgent-ping" },
+    { "source": "4", "target": "5" },
+    { "source": "5", "target": "6" },
+    { "source": "urgent-ping", "target": "decision-2" },
+    { "source": "6", "target": "7" },
+    { "source": "7", "target": "8" },
+    { "source": "8", "target": "9" },
+    { "source": "decision-1.3", "target": "10"},
+    { "source": "decision-2.1", "target": "placeholder-2", "data": {"type": "placeholder"}},
+    { "source": "decision-2.2", "target": "placeholder-3", "data": {"type": "placeholder"}},
+    { "source": "decision-1.4", "target": "placeholder-1", "data": {"type": "placeholder"}},
+    { "source": "10", "target": "placeholder-4"}
+  ]
+}

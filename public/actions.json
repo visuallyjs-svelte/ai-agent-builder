@@ -1,0 +1,4409 @@
+[
+    {
+        "provider": "GitHub",
+        "actions": [
+            {
+                "id": "create_issue",
+                "name": "Create Issue",
+                "desc": "Creates a new issue in a repository.",
+                "properties": [
+                    {
+                        "id": "repository",
+                        "name": "Repository",
+                        "desc": "The name of the repository (e.g., 'owner/repo').",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "title",
+                        "name": "Title",
+                        "desc": "The title of the issue.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "body",
+                        "name": "Body",
+                        "desc": "The contents of the issue.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "assignees",
+                        "name": "Assignees",
+                        "desc": "Usernames to assign to the issue.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "labels",
+                        "name": "Labels",
+                        "desc": "Labels to assign to the issue.",
+                        "datatype": "array"
+                    }
+                ]
+            },
+            {
+                "id": "close_issue",
+                "name": "Close Issue",
+                "desc": "Closes an existing issue.",
+                "properties": [
+                    {
+                        "id": "repository",
+                        "name": "Repository",
+                        "desc": "The name of the repository (e.g., 'owner/repo').",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "issue_number",
+                        "name": "Issue Number",
+                        "desc": "The number of the issue to close.",
+                        "datatype": "number"
+                    }
+                ]
+            },
+            {
+                "id": "comment_on_issue",
+                "name": "Comment on Issue",
+                "desc": "Adds a comment to an issue.",
+                "properties": [
+                    {
+                        "id": "repository",
+                        "name": "Repository",
+                        "desc": "The name of the repository (e.g., 'owner/repo').",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "issue_number",
+                        "name": "Issue Number",
+                        "desc": "The number of the issue to comment on.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "comment",
+                        "name": "Comment",
+                        "desc": "The content of the comment.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_pull_request",
+                "name": "Create Pull Request",
+                "desc": "Creates a new pull request.",
+                "properties": [
+                    {
+                        "id": "repository",
+                        "name": "Repository",
+                        "desc": "The name of the repository (e.g., 'owner/repo').",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "title",
+                        "name": "Title",
+                        "desc": "The title of the pull request.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "head",
+                        "name": "Head Branch",
+                        "desc": "The name of the branch where your changes are implemented.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "base",
+                        "name": "Base Branch",
+                        "desc": "The name of the branch you want the changes pulled into.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "body",
+                        "name": "Body",
+                        "desc": "The contents of the pull request.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "merge_pull_request",
+                "name": "Merge Pull Request",
+                "desc": "Merges an existing pull request.",
+                "properties": [
+                    {
+                        "id": "repository",
+                        "name": "Repository",
+                        "desc": "The name of the repository (e.g., 'owner/repo').",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "pull_number",
+                        "name": "Pull Request Number",
+                        "desc": "The number of the pull request to merge.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "commit_title",
+                        "name": "Commit Title",
+                        "desc": "Title for the automatic commit message.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "commit_message",
+                        "name": "Commit Message",
+                        "desc": "Extra detail to append to automatic commit message.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "merge_method",
+                        "name": "Merge Method",
+                        "desc": "Merge method to use (merge, squash, or rebase).",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "comment_on_pull_request",
+                "name": "Comment on Pull Request",
+                "desc": "Adds a comment to a pull request.",
+                "properties": [
+                    {
+                        "id": "repository",
+                        "name": "Repository",
+                        "desc": "The name of the repository (e.g., 'owner/repo').",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "pull_number",
+                        "name": "Pull Request Number",
+                        "desc": "The number of the pull request to comment on.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "comment",
+                        "name": "Comment",
+                        "desc": "The content of the comment.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "github.svg"
+    },
+    {
+        "provider": "Gmail",
+        "actions": [
+            {
+                "id": "archive",
+                "name": "Archive",
+                "desc": "Archives an email.",
+                "properties": [
+                    {
+                        "id": "email_id",
+                        "name": "Email ID",
+                        "desc": "The ID of the email to mark as read.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "draft_email",
+                "name": "Draft Email",
+                "desc": "Saves an email as a draft.",
+                "properties": [
+                    {
+                        "id": "subject",
+                        "name": "Subject",
+                        "desc": "The subject of the email.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "body",
+                        "name": "Body",
+                        "desc": "The body of the email.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "to",
+                        "name": "To",
+                        "desc": "The recipient of the email.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "send_email",
+                "name": "Send Email",
+                "desc": "Sends an email.",
+                "properties": [
+                    {
+                        "id": "subject",
+                        "name": "Subject",
+                        "desc": "The subject of the email.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "body",
+                        "name": "Body",
+                        "desc": "The body of the email.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "to",
+                        "name": "To",
+                        "desc": "The recipient of the email.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "mark_as_read",
+                "name": "Mark as Read",
+                "desc": "Marks an email as read.",
+                "properties": [
+                    {
+                        "id": "email_id",
+                        "name": "Email ID",
+                        "desc": "The ID of the email to mark as read.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "mark_as_unread",
+                "name": "Mark as Unread",
+                "desc": "Marks an email as unread.",
+                "properties": [
+                    {
+                        "id": "email_id",
+                        "name": "Email ID",
+                        "desc": "The ID of the email to mark as unread.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "move_to_trash",
+                "name": "Move to Trash",
+                "desc": "Moves an email to trash.",
+                "properties": [
+                    {
+                        "id": "email_id",
+                        "name": "Email ID",
+                        "desc": "The ID of the email to move to trash.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "gmail.webp"
+    },
+    {
+        "provider": "Slack",
+        "actions": [
+            {
+                "id": "send_channel_message",
+                "name": "Send Channel Message",
+                "desc": "Sends a message to a public channel.",
+                "properties": [
+                    {
+                        "id": "channel_id",
+                        "name": "Channel ID",
+                        "desc": "The ID of the channel to send the message to.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "message",
+                        "name": "Message",
+                        "desc": "The content of the message to send.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "send_direct_message",
+                "name": "Send Direct Message",
+                "desc": "Sends a direct message to a user.",
+                "properties": [
+                    {
+                        "id": "user_id",
+                        "name": "User ID",
+                        "desc": "The ID of the user to send the message to.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "message",
+                        "name": "Message",
+                        "desc": "The content of the message to send.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "add_reaction",
+                "name": "Add Reaction",
+                "desc": "Adds an emoji reaction to a message.",
+                "properties": [
+                    {
+                        "id": "channel_id",
+                        "name": "Channel ID",
+                        "desc": "The ID of the channel containing the message.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "timestamp",
+                        "name": "Message Timestamp",
+                        "desc": "The timestamp of the message to react to.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "emoji",
+                        "name": "Emoji",
+                        "desc": "The emoji to use for the reaction (e.g., :thumbsup:).",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_channel",
+                "name": "Create Channel",
+                "desc": "Creates a new channel.",
+                "properties": [
+                    {
+                        "id": "channel_name",
+                        "name": "Channel Name",
+                        "desc": "The name of the new channel.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "is_private",
+                        "name": "Is Private",
+                        "desc": "Whether the channel should be private.",
+                        "datatype": "boolean"
+                    }
+                ]
+            },
+            {
+                "id": "invite_user_to_channel",
+                "name": "Invite User to Channel",
+                "desc": "Invites a user to a channel.",
+                "properties": [
+                    {
+                        "id": "channel_id",
+                        "name": "Channel ID",
+                        "desc": "The ID of the channel to invite the user to.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "user_id",
+                        "name": "User ID",
+                        "desc": "The ID of the user to invite.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "slack.webp"
+    },
+    {
+        "provider": "Salesforce",
+        "actions": [
+            {
+                "id": "create_lead",
+                "name": "Create Lead",
+                "desc": "Creates a new lead in Salesforce.",
+                "properties": [
+                    {
+                        "id": "first_name",
+                        "name": "First Name",
+                        "desc": "The first name of the lead.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "last_name",
+                        "name": "Last Name",
+                        "desc": "The last name of the lead.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "company",
+                        "name": "Company",
+                        "desc": "The company associated with the lead.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "email",
+                        "name": "Email",
+                        "desc": "The email address of the lead.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "update_lead",
+                "name": "Update Lead",
+                "desc": "Updates an existing lead in Salesforce.",
+                "properties": [
+                    {
+                        "id": "lead_id",
+                        "name": "Lead ID",
+                        "desc": "The ID of the lead to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "fields",
+                        "name": "Fields",
+                        "desc": "A key-value map of fields to update.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "create_contact",
+                "name": "Create Contact",
+                "desc": "Creates a new contact in Salesforce.",
+                "properties": [
+                    {
+                        "id": "first_name",
+                        "name": "First Name",
+                        "desc": "The first name of the contact.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "last_name",
+                        "name": "Last Name",
+                        "desc": "The last name of the contact.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "account_id",
+                        "name": "Account ID",
+                        "desc": "The ID of the account associated with the contact.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "email",
+                        "name": "Email",
+                        "desc": "The email address of the contact.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "update_contact",
+                "name": "Update Contact",
+                "desc": "Updates an existing contact in Salesforce.",
+                "properties": [
+                    {
+                        "id": "contact_id",
+                        "name": "Contact ID",
+                        "desc": "The ID of the contact to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "fields",
+                        "name": "Fields",
+                        "desc": "A key-value map of fields to update.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "create_opportunity",
+                "name": "Create Opportunity",
+                "desc": "Creates a new opportunity in Salesforce.",
+                "properties": [
+                    {
+                        "id": "name",
+                        "name": "Opportunity Name",
+                        "desc": "The name of the opportunity.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "close_date",
+                        "name": "Close Date",
+                        "desc": "The expected close date of the opportunity.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "stage",
+                        "name": "Stage",
+                        "desc": "The sales stage of the opportunity.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "amount",
+                        "name": "Amount",
+                        "desc": "The amount associated with the opportunity.",
+                        "datatype": "number"
+                    }
+                ]
+            }
+        ],
+        "icon": "salesforce.png"
+    },
+    {
+        "provider": "Google Calendar",
+        "actions": [
+            {
+                "id": "create_event",
+                "name": "Create Event",
+                "desc": "Creates a new event in the specified calendar.",
+                "properties": [
+                    {
+                        "id": "calendar_id",
+                        "name": "Calendar ID",
+                        "desc": "The ID of the calendar to add the event to.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "summary",
+                        "name": "Summary",
+                        "desc": "The title of the event.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "description",
+                        "name": "Description",
+                        "desc": "Details about the event.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "start_time",
+                        "name": "Start Time",
+                        "desc": "The start time of the event.",
+                        "datatype": "datetime"
+                    },
+                    {
+                        "id": "end_time",
+                        "name": "End Time",
+                        "desc": "The end time of the event.",
+                        "datatype": "datetime"
+                    },
+                    {
+                        "id": "attendees",
+                        "name": "Attendees",
+                        "desc": "List of attendee email addresses.",
+                        "datatype": "array"
+                    }
+                ]
+            },
+            {
+                "id": "update_event",
+                "name": "Update Event",
+                "desc": "Updates an existing event in the calendar.",
+                "properties": [
+                    {
+                        "id": "calendar_id",
+                        "name": "Calendar ID",
+                        "desc": "The ID of the calendar containing the event.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "event_id",
+                        "name": "Event ID",
+                        "desc": "The ID of the event to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "summary",
+                        "name": "Summary",
+                        "desc": "The updated title of the event.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "description",
+                        "name": "Description",
+                        "desc": "Updated details about the event.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "start_time",
+                        "name": "Start Time",
+                        "desc": "The updated start time of the event.",
+                        "datatype": "datetime"
+                    },
+                    {
+                        "id": "end_time",
+                        "name": "End Time",
+                        "desc": "The updated end time of the event.",
+                        "datatype": "datetime"
+                    },
+                    {
+                        "id": "attendees",
+                        "name": "Attendees",
+                        "desc": "Updated list of attendee email addresses.",
+                        "datatype": "array"
+                    }
+                ]
+            },
+            {
+                "id": "delete_event",
+                "name": "Delete Event",
+                "desc": "Deletes an event from the calendar.",
+                "properties": [
+                    {
+                        "id": "calendar_id",
+                        "name": "Calendar ID",
+                        "desc": "The ID of the calendar containing the event.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "event_id",
+                        "name": "Event ID",
+                        "desc": "The ID of the event to delete.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "add_attendee",
+                "name": "Add Attendee",
+                "desc": "Adds an attendee to an existing event.",
+                "properties": [
+                    {
+                        "id": "calendar_id",
+                        "name": "Calendar ID",
+                        "desc": "The ID of the calendar containing the event.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "event_id",
+                        "name": "Event ID",
+                        "desc": "The ID of the event to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "attendee_email",
+                        "name": "Attendee Email",
+                        "desc": "The email address of the attendee to add.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "remove_attendee",
+                "name": "Remove Attendee",
+                "desc": "Removes an attendee from an existing event.",
+                "properties": [
+                    {
+                        "id": "calendar_id",
+                        "name": "Calendar ID",
+                        "desc": "The ID of the calendar containing the event.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "event_id",
+                        "name": "Event ID",
+                        "desc": "The ID of the event to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "attendee_email",
+                        "name": "Attendee Email",
+                        "desc": "The email address of the attendee to remove.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "google_calendar.webp"
+    },
+    {
+        "provider": "Trello",
+        "actions": [
+            {
+                "id": "create_card",
+                "name": "Create Card",
+                "desc": "Creates a new card in a specified list.",
+                "properties": [
+                    {
+                        "id": "list_id",
+                        "name": "List ID",
+                        "desc": "The ID of the list where the card will be created.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "name",
+                        "name": "Card Name",
+                        "desc": "The name of the card.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "description",
+                        "name": "Description",
+                        "desc": "The description of the card.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "due",
+                        "name": "Due Date",
+                        "desc": "The due date of the card.",
+                        "datatype": "datetime"
+                    },
+                    {
+                        "id": "members",
+                        "name": "Members",
+                        "desc": "List of member IDs to assign to the card.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "labels",
+                        "name": "Labels",
+                        "desc": "List of label IDs to assign to the card.",
+                        "datatype": "array"
+                    }
+                ]
+            },
+            {
+                "id": "update_card",
+                "name": "Update Card",
+                "desc": "Updates an existing card's details.",
+                "properties": [
+                    {
+                        "id": "card_id",
+                        "name": "Card ID",
+                        "desc": "The ID of the card to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "name",
+                        "name": "Card Name",
+                        "desc": "The new name of the card.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "description",
+                        "name": "Description",
+                        "desc": "The new description of the card.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "due",
+                        "name": "Due Date",
+                        "desc": "The new due date of the card.",
+                        "datatype": "datetime"
+                    },
+                    {
+                        "id": "closed",
+                        "name": "Closed",
+                        "desc": "Whether the card is archived.",
+                        "datatype": "boolean"
+                    },
+                    {
+                        "id": "members",
+                        "name": "Members",
+                        "desc": "List of member IDs to assign to the card.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "labels",
+                        "name": "Labels",
+                        "desc": "List of label IDs to assign to the card.",
+                        "datatype": "array"
+                    }
+                ]
+            },
+            {
+                "id": "move_card",
+                "name": "Move Card",
+                "desc": "Moves a card to a different list or board.",
+                "properties": [
+                    {
+                        "id": "card_id",
+                        "name": "Card ID",
+                        "desc": "The ID of the card to move.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "list_id",
+                        "name": "List ID",
+                        "desc": "The ID of the destination list.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "board_id",
+                        "name": "Board ID",
+                        "desc": "The ID of the destination board (optional).",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "add_comment",
+                "name": "Add Comment",
+                "desc": "Adds a comment to a card.",
+                "properties": [
+                    {
+                        "id": "card_id",
+                        "name": "Card ID",
+                        "desc": "The ID of the card to comment on.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "text",
+                        "name": "Comment Text",
+                        "desc": "The content of the comment.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "add_member_to_card",
+                "name": "Add Member to Card",
+                "desc": "Adds a member to a card.",
+                "properties": [
+                    {
+                        "id": "card_id",
+                        "name": "Card ID",
+                        "desc": "The ID of the card.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "member_id",
+                        "name": "Member ID",
+                        "desc": "The ID of the member to add.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "trello.svg"
+    },
+    {
+        "provider": "Notion",
+        "actions": [
+            {
+                "id": "create_page",
+                "name": "Create Page",
+                "desc": "Creates a new page in a specified parent page or database.",
+                "properties": [
+                    {
+                        "id": "parent_id",
+                        "name": "Parent ID",
+                        "desc": "The ID of the parent page or database.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "properties",
+                        "name": "Properties",
+                        "desc": "A dictionary of property values for the new page.",
+                        "datatype": "object"
+                    },
+                    {
+                        "id": "children",
+                        "name": "Children",
+                        "desc": "Optional content blocks to include in the page.",
+                        "datatype": "array"
+                    }
+                ]
+            },
+            {
+                "id": "update_page_properties",
+                "name": "Update Page Properties",
+                "desc": "Updates the properties of an existing page.",
+                "properties": [
+                    {
+                        "id": "page_id",
+                        "name": "Page ID",
+                        "desc": "The ID of the page to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "properties",
+                        "name": "Properties",
+                        "desc": "A dictionary of property values to update.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "append_block_children",
+                "name": "Append Block Children",
+                "desc": "Appends content blocks to an existing page or block.",
+                "properties": [
+                    {
+                        "id": "block_id",
+                        "name": "Block ID",
+                        "desc": "The ID of the block to append children to.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "children",
+                        "name": "Children",
+                        "desc": "Content blocks to append.",
+                        "datatype": "array"
+                    }
+                ]
+            },
+            {
+                "id": "create_database",
+                "name": "Create Database",
+                "desc": "Creates a new database as a subpage in the specified parent page.",
+                "properties": [
+                    {
+                        "id": "parent_id",
+                        "name": "Parent ID",
+                        "desc": "The ID of the parent page.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "title",
+                        "name": "Title",
+                        "desc": "The title of the new database.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "properties",
+                        "name": "Properties",
+                        "desc": "A dictionary defining the schema of the database.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "add_comment",
+                "name": "Add Comment",
+                "desc": "Adds a comment to a page or discussion thread.",
+                "properties": [
+                    {
+                        "id": "parent_id",
+                        "name": "Parent ID",
+                        "desc": "The ID of the page or discussion thread.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "discussion_id",
+                        "name": "Discussion ID",
+                        "desc": "The ID of the discussion thread (optional).",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "rich_text",
+                        "name": "Rich Text",
+                        "desc": "The content of the comment in rich text format.",
+                        "datatype": "array"
+                    }
+                ]
+            }
+        ],
+        "icon": "notion.webp"
+    },
+    {
+        "provider": "Asana",
+        "actions": [
+            {
+                "id": "create_task",
+                "name": "Create Task",
+                "desc": "Creates a new task in a specified project or workspace.",
+                "properties": [
+                    {
+                        "id": "workspace",
+                        "name": "Workspace ID",
+                        "desc": "The ID of the workspace where the task will be created.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "project",
+                        "name": "Project ID",
+                        "desc": "The ID of the project to associate with the task.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "name",
+                        "name": "Task Name",
+                        "desc": "The name of the task.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "notes",
+                        "name": "Notes",
+                        "desc": "The description or notes for the task.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "assignee",
+                        "name": "Assignee",
+                        "desc": "The ID of the user to assign the task to.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "due_date",
+                        "name": "Due Date",
+                        "desc": "The due date of the task.",
+                        "datatype": "date"
+                    }
+                ]
+            },
+            {
+                "id": "update_task",
+                "name": "Update Task",
+                "desc": "Updates an existing task's details.",
+                "properties": [
+                    {
+                        "id": "task_id",
+                        "name": "Task ID",
+                        "desc": "The ID of the task to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "name",
+                        "name": "Task Name",
+                        "desc": "The new name of the task.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "notes",
+                        "name": "Notes",
+                        "desc": "The new description or notes for the task.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "assignee",
+                        "name": "Assignee",
+                        "desc": "The ID of the new assignee.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "due_date",
+                        "name": "Due Date",
+                        "desc": "The new due date of the task.",
+                        "datatype": "date"
+                    }
+                ]
+            },
+            {
+                "id": "add_comment",
+                "name": "Add Comment",
+                "desc": "Adds a comment to a task.",
+                "properties": [
+                    {
+                        "id": "task_id",
+                        "name": "Task ID",
+                        "desc": "The ID of the task to comment on.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "text",
+                        "name": "Comment Text",
+                        "desc": "The content of the comment.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_project",
+                "name": "Create Project",
+                "desc": "Creates a new project in a workspace.",
+                "properties": [
+                    {
+                        "id": "workspace",
+                        "name": "Workspace ID",
+                        "desc": "The ID of the workspace where the project will be created.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "name",
+                        "name": "Project Name",
+                        "desc": "The name of the project.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "notes",
+                        "name": "Notes",
+                        "desc": "The description or notes for the project.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_subtask",
+                "name": "Create Subtask",
+                "desc": "Adds a subtask to an existing task.",
+                "properties": [
+                    {
+                        "id": "parent_task_id",
+                        "name": "Parent Task ID",
+                        "desc": "The ID of the parent task.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "name",
+                        "name": "Subtask Name",
+                        "desc": "The name of the subtask.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "assignee",
+                        "name": "Assignee",
+                        "desc": "The ID of the user to assign the subtask to.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "due_date",
+                        "name": "Due Date",
+                        "desc": "The due date of the subtask.",
+                        "datatype": "date"
+                    }
+                ]
+            }
+        ],
+        "icon": "asana.svg"
+    },
+    {
+        "provider": "HubSpot",
+        "actions": [
+            {
+                "id": "create_contact",
+                "name": "Create Contact",
+                "desc": "Creates a new contact in HubSpot.",
+                "properties": [
+                    {
+                        "id": "email",
+                        "name": "Email",
+                        "desc": "The email address of the contact.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "firstname",
+                        "name": "First Name",
+                        "desc": "The first name of the contact.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "lastname",
+                        "name": "Last Name",
+                        "desc": "The last name of the contact.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "phone",
+                        "name": "Phone Number",
+                        "desc": "The phone number of the contact.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "update_contact",
+                "name": "Update Contact",
+                "desc": "Updates an existing contact's information.",
+                "properties": [
+                    {
+                        "id": "contact_id",
+                        "name": "Contact ID",
+                        "desc": "The unique ID of the contact to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "properties",
+                        "name": "Properties",
+                        "desc": "A dictionary of properties to update.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "create_deal",
+                "name": "Create Deal",
+                "desc": "Creates a new deal in HubSpot.",
+                "properties": [
+                    {
+                        "id": "dealname",
+                        "name": "Deal Name",
+                        "desc": "The name of the deal.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "amount",
+                        "name": "Amount",
+                        "desc": "The monetary value of the deal.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "pipeline",
+                        "name": "Pipeline",
+                        "desc": "The pipeline ID for the deal.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "dealstage",
+                        "name": "Deal Stage",
+                        "desc": "The stage ID within the pipeline.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "associated_contact_ids",
+                        "name": "Associated Contact IDs",
+                        "desc": "List of contact IDs to associate with the deal.",
+                        "datatype": "array"
+                    }
+                ]
+            },
+            {
+                "id": "update_deal",
+                "name": "Update Deal",
+                "desc": "Updates an existing deal's information.",
+                "properties": [
+                    {
+                        "id": "deal_id",
+                        "name": "Deal ID",
+                        "desc": "The unique ID of the deal to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "properties",
+                        "name": "Properties",
+                        "desc": "A dictionary of properties to update.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "add_note_to_contact",
+                "name": "Add Note to Contact",
+                "desc": "Adds a note to a specific contact.",
+                "properties": [
+                    {
+                        "id": "contact_id",
+                        "name": "Contact ID",
+                        "desc": "The unique ID of the contact.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "note_body",
+                        "name": "Note Body",
+                        "desc": "The content of the note.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "timestamp",
+                        "name": "Timestamp",
+                        "desc": "The time the note was created.",
+                        "datatype": "datetime"
+                    }
+                ]
+            }
+        ],
+        "icon": "hubspot.webp"
+    },
+    {
+        "provider": "Zendesk",
+        "actions": [
+            {
+                "id": "create_ticket",
+                "name": "Create Ticket",
+                "desc": "Creates a new support ticket.",
+                "properties": [
+                    {
+                        "id": "subject",
+                        "name": "Subject",
+                        "desc": "The subject of the ticket.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "comment",
+                        "name": "Comment",
+                        "desc": "The initial comment or description of the issue.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "priority",
+                        "name": "Priority",
+                        "desc": "The priority level of the ticket (e.g., low, normal, high, urgent).",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "status",
+                        "name": "Status",
+                        "desc": "The status of the ticket (e.g., new, open, pending, solved).",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "requester",
+                        "name": "Requester",
+                        "desc": "Information about the person requesting support, including name and email.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "update_ticket",
+                "name": "Update Ticket",
+                "desc": "Updates an existing support ticket.",
+                "properties": [
+                    {
+                        "id": "ticket_id",
+                        "name": "Ticket ID",
+                        "desc": "The unique identifier of the ticket to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "subject",
+                        "name": "Subject",
+                        "desc": "The updated subject of the ticket.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "comment",
+                        "name": "Comment",
+                        "desc": "An additional comment or update to the ticket.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "priority",
+                        "name": "Priority",
+                        "desc": "The updated priority level of the ticket.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "status",
+                        "name": "Status",
+                        "desc": "The updated status of the ticket.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "add_comment_to_ticket",
+                "name": "Add Comment to Ticket",
+                "desc": "Adds a comment to an existing ticket.",
+                "properties": [
+                    {
+                        "id": "ticket_id",
+                        "name": "Ticket ID",
+                        "desc": "The unique identifier of the ticket.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "comment",
+                        "name": "Comment",
+                        "desc": "The content of the comment to add.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "public",
+                        "name": "Public",
+                        "desc": "Whether the comment is public (true) or internal (false).",
+                        "datatype": "boolean"
+                    }
+                ]
+            },
+            {
+                "id": "create_user",
+                "name": "Create User",
+                "desc": "Creates a new user in Zendesk.",
+                "properties": [
+                    {
+                        "id": "name",
+                        "name": "Name",
+                        "desc": "The full name of the user.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "email",
+                        "name": "Email",
+                        "desc": "The email address of the user.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "role",
+                        "name": "Role",
+                        "desc": "The role assigned to the user (e.g., end-user, agent, admin).",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "phone",
+                        "name": "Phone",
+                        "desc": "The phone number of the user.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "update_user",
+                "name": "Update User",
+                "desc": "Updates information for an existing user.",
+                "properties": [
+                    {
+                        "id": "user_id",
+                        "name": "User ID",
+                        "desc": "The unique identifier of the user to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "name",
+                        "name": "Name",
+                        "desc": "The updated full name of the user.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "email",
+                        "name": "Email",
+                        "desc": "The updated email address of the user.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "phone",
+                        "name": "Phone",
+                        "desc": "The updated phone number of the user.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "role",
+                        "name": "Role",
+                        "desc": "The updated role assigned to the user.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "zendesk.svg"
+    },
+    {
+        "provider": "Zoom",
+        "actions": [
+            {
+                "id": "create_meeting",
+                "name": "Create Meeting",
+                "desc": "Creates a new Zoom meeting.",
+                "properties": [
+                    {
+                        "id": "user_id",
+                        "name": "User ID",
+                        "desc": "The user ID or email address of the meeting host.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "topic",
+                        "name": "Topic",
+                        "desc": "The topic of the meeting.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "type",
+                        "name": "Meeting Type",
+                        "desc": "The type of meeting: 1 for instant, 2 for scheduled, 3 for recurring with no fixed time, 8 for recurring with fixed time.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "start_time",
+                        "name": "Start Time",
+                        "desc": "The start time of the meeting in ISO 8601 format.",
+                        "datatype": "datetime"
+                    },
+                    {
+                        "id": "duration",
+                        "name": "Duration",
+                        "desc": "The duration of the meeting in minutes.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "timezone",
+                        "name": "Time Zone",
+                        "desc": "The time zone for the meeting start time.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "agenda",
+                        "name": "Agenda",
+                        "desc": "The agenda of the meeting.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "update_meeting",
+                "name": "Update Meeting",
+                "desc": "Updates an existing Zoom meeting.",
+                "properties": [
+                    {
+                        "id": "meeting_id",
+                        "name": "Meeting ID",
+                        "desc": "The ID of the meeting to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "topic",
+                        "name": "Topic",
+                        "desc": "The updated topic of the meeting.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "start_time",
+                        "name": "Start Time",
+                        "desc": "The updated start time of the meeting in ISO 8601 format.",
+                        "datatype": "datetime"
+                    },
+                    {
+                        "id": "duration",
+                        "name": "Duration",
+                        "desc": "The updated duration of the meeting in minutes.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "timezone",
+                        "name": "Time Zone",
+                        "desc": "The updated time zone for the meeting start time.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "agenda",
+                        "name": "Agenda",
+                        "desc": "The updated agenda of the meeting.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "add_meeting_registrant",
+                "name": "Add Meeting Registrant",
+                "desc": "Registers a participant for a Zoom meeting.",
+                "properties": [
+                    {
+                        "id": "meeting_id",
+                        "name": "Meeting ID",
+                        "desc": "The ID of the meeting.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "email",
+                        "name": "Email",
+                        "desc": "The email address of the registrant.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "first_name",
+                        "name": "First Name",
+                        "desc": "The first name of the registrant.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "last_name",
+                        "name": "Last Name",
+                        "desc": "The last name of the registrant.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_webinar",
+                "name": "Create Webinar",
+                "desc": "Creates a new Zoom webinar.",
+                "properties": [
+                    {
+                        "id": "user_id",
+                        "name": "User ID",
+                        "desc": "The user ID or email address of the webinar host.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "topic",
+                        "name": "Topic",
+                        "desc": "The topic of the webinar.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "type",
+                        "name": "Webinar Type",
+                        "desc": "The type of webinar: 5 for webinar.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "start_time",
+                        "name": "Start Time",
+                        "desc": "The start time of the webinar in ISO 8601 format.",
+                        "datatype": "datetime"
+                    },
+                    {
+                        "id": "duration",
+                        "name": "Duration",
+                        "desc": "The duration of the webinar in minutes.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "timezone",
+                        "name": "Time Zone",
+                        "desc": "The time zone for the webinar start time.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "agenda",
+                        "name": "Agenda",
+                        "desc": "The agenda of the webinar.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "add_webinar_registrant",
+                "name": "Add Webinar Registrant",
+                "desc": "Registers a participant for a Zoom webinar.",
+                "properties": [
+                    {
+                        "id": "webinar_id",
+                        "name": "Webinar ID",
+                        "desc": "The ID of the webinar.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "email",
+                        "name": "Email",
+                        "desc": "The email address of the registrant.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "first_name",
+                        "name": "First Name",
+                        "desc": "The first name of the registrant.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "last_name",
+                        "name": "Last Name",
+                        "desc": "The last name of the registrant.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "zoom.svg"
+    },
+    {
+        "provider": "Microsoft Teams",
+        "actions": [
+            {
+                "id": "create_team",
+                "name": "Create Team",
+                "desc": "Creates a new team within Microsoft Teams.",
+                "properties": [
+                    {
+                        "id": "displayName",
+                        "name": "Display Name",
+                        "desc": "The name of the team.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "description",
+                        "name": "Description",
+                        "desc": "A description for the team.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "visibility",
+                        "name": "Visibility",
+                        "desc": "Specifies the visibility of the team: 'public' or 'private'.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_channel",
+                "name": "Create Channel",
+                "desc": "Creates a new channel within a specified team.",
+                "properties": [
+                    {
+                        "id": "team_id",
+                        "name": "Team ID",
+                        "desc": "The ID of the team where the channel will be created.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "displayName",
+                        "name": "Display Name",
+                        "desc": "The name of the channel.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "description",
+                        "name": "Description",
+                        "desc": "A description for the channel.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "membershipType",
+                        "name": "Membership Type",
+                        "desc": "Specifies the membership type: 'standard' or 'private'.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "send_channel_message",
+                "name": "Send Channel Message",
+                "desc": "Sends a message to a specific channel within a team.",
+                "properties": [
+                    {
+                        "id": "team_id",
+                        "name": "Team ID",
+                        "desc": "The ID of the team.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "channel_id",
+                        "name": "Channel ID",
+                        "desc": "The ID of the channel.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "message",
+                        "name": "Message",
+                        "desc": "The content of the message to send.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_meeting",
+                "name": "Create Meeting",
+                "desc": "Schedules a new meeting in Microsoft Teams.",
+                "properties": [
+                    {
+                        "id": "organizer_id",
+                        "name": "Organizer ID",
+                        "desc": "The ID of the user organizing the meeting.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "subject",
+                        "name": "Subject",
+                        "desc": "The subject or title of the meeting.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "start_time",
+                        "name": "Start Time",
+                        "desc": "The start time of the meeting.",
+                        "datatype": "datetime"
+                    },
+                    {
+                        "id": "end_time",
+                        "name": "End Time",
+                        "desc": "The end time of the meeting.",
+                        "datatype": "datetime"
+                    },
+                    {
+                        "id": "attendees",
+                        "name": "Attendees",
+                        "desc": "A list of attendee email addresses.",
+                        "datatype": "array"
+                    }
+                ]
+            },
+            {
+                "id": "add_member_to_team",
+                "name": "Add Member to Team",
+                "desc": "Adds a new member to a specified team.",
+                "properties": [
+                    {
+                        "id": "team_id",
+                        "name": "Team ID",
+                        "desc": "The ID of the team.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "user_id",
+                        "name": "User ID",
+                        "desc": "The ID of the user to add.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "role",
+                        "name": "Role",
+                        "desc": "The role assigned to the user: 'owner' or 'member'.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "microsoft_teams.webp"
+    },
+    {
+        "provider": "Google Drive",
+        "actions": [
+            {
+                "id": "create_file",
+                "name": "Create File",
+                "desc": "Creates a new file in Google Drive.",
+                "properties": [
+                    {
+                        "id": "name",
+                        "name": "File Name",
+                        "desc": "The name of the new file.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "mimeType",
+                        "name": "MIME Type",
+                        "desc": "The MIME type of the file (e.g., 'application/vnd.google-apps.document').",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "parents",
+                        "name": "Parent Folder IDs",
+                        "desc": "An array of folder IDs to contain the new file.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "content",
+                        "name": "File Content",
+                        "desc": "The content of the file, if applicable.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_folder",
+                "name": "Create Folder",
+                "desc": "Creates a new folder in Google Drive.",
+                "properties": [
+                    {
+                        "id": "name",
+                        "name": "Folder Name",
+                        "desc": "The name of the new folder.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "parents",
+                        "name": "Parent Folder IDs",
+                        "desc": "An array of folder IDs to contain the new folder.",
+                        "datatype": "array"
+                    }
+                ]
+            },
+            {
+                "id": "upload_file",
+                "name": "Upload File",
+                "desc": "Uploads a file to Google Drive.",
+                "properties": [
+                    {
+                        "id": "name",
+                        "name": "File Name",
+                        "desc": "The name of the file to upload.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "mimeType",
+                        "name": "MIME Type",
+                        "desc": "The MIME type of the file.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "parents",
+                        "name": "Parent Folder IDs",
+                        "desc": "An array of folder IDs to contain the uploaded file.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "fileContent",
+                        "name": "File Content",
+                        "desc": "The binary content of the file, encoded as a base64 string.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "delete_file",
+                "name": "Delete File",
+                "desc": "Permanently deletes a file from Google Drive.",
+                "properties": [
+                    {
+                        "id": "fileId",
+                        "name": "File ID",
+                        "desc": "The ID of the file to delete.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "share_file",
+                "name": "Share File",
+                "desc": "Shares a file with specified users or groups.",
+                "properties": [
+                    {
+                        "id": "fileId",
+                        "name": "File ID",
+                        "desc": "The ID of the file to share.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "type",
+                        "name": "Permission Type",
+                        "desc": "The type of permission to grant (e.g., 'user', 'group', 'domain', 'anyone').",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "role",
+                        "name": "Role",
+                        "desc": "The role to assign (e.g., 'reader', 'commenter', 'writer').",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "emailAddress",
+                        "name": "Email Address",
+                        "desc": "The email address of the user or group to share with.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "google_drive.webp"
+    },
+    {
+        "provider": "Airtable",
+        "actions": [
+            {
+                "id": "create_record",
+                "name": "Create Record",
+                "desc": "Creates a new record in a specified table.",
+                "properties": [
+                    {
+                        "id": "base_id",
+                        "name": "Base ID",
+                        "desc": "The ID of the base containing the table.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "table_name",
+                        "name": "Table Name",
+                        "desc": "The name of the table where the record will be created.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "fields",
+                        "name": "Fields",
+                        "desc": "A key-value map of field names and their corresponding values.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "update_record",
+                "name": "Update Record",
+                "desc": "Updates an existing record in a specified table.",
+                "properties": [
+                    {
+                        "id": "base_id",
+                        "name": "Base ID",
+                        "desc": "The ID of the base containing the table.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "table_name",
+                        "name": "Table Name",
+                        "desc": "The name of the table containing the record.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "record_id",
+                        "name": "Record ID",
+                        "desc": "The ID of the record to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "fields",
+                        "name": "Fields",
+                        "desc": "A key-value map of field names and their updated values.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "delete_record",
+                "name": "Delete Record",
+                "desc": "Deletes a record from a specified table.",
+                "properties": [
+                    {
+                        "id": "base_id",
+                        "name": "Base ID",
+                        "desc": "The ID of the base containing the table.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "table_name",
+                        "name": "Table Name",
+                        "desc": "The name of the table containing the record.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "record_id",
+                        "name": "Record ID",
+                        "desc": "The ID of the record to delete.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "retrieve_record",
+                "name": "Retrieve Record",
+                "desc": "Retrieves a specific record from a table.",
+                "properties": [
+                    {
+                        "id": "base_id",
+                        "name": "Base ID",
+                        "desc": "The ID of the base containing the table.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "table_name",
+                        "name": "Table Name",
+                        "desc": "The name of the table containing the record.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "record_id",
+                        "name": "Record ID",
+                        "desc": "The ID of the record to retrieve.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "find_records",
+                "name": "Find Records",
+                "desc": "Finds records in a table that match a specified formula.",
+                "properties": [
+                    {
+                        "id": "base_id",
+                        "name": "Base ID",
+                        "desc": "The ID of the base containing the table.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "table_name",
+                        "name": "Table Name",
+                        "desc": "The name of the table to search.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "filter_formula",
+                        "name": "Filter Formula",
+                        "desc": "A formula used to filter records.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "airtable.webp"
+    },
+    {
+        "provider": "Jira",
+        "actions": [
+            {
+                "id": "create_issue",
+                "name": "Create Issue",
+                "desc": "Creates a new issue in a specified project.",
+                "properties": [
+                    {
+                        "id": "project_key",
+                        "name": "Project Key",
+                        "desc": "The key of the project where the issue will be created.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "summary",
+                        "name": "Summary",
+                        "desc": "A brief summary of the issue.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "description",
+                        "name": "Description",
+                        "desc": "A detailed description of the issue.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "issue_type",
+                        "name": "Issue Type",
+                        "desc": "The type of issue (e.g., Bug, Task, Story).",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "assignee",
+                        "name": "Assignee",
+                        "desc": "The username of the person to assign the issue to.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "update_issue",
+                "name": "Update Issue",
+                "desc": "Updates fields of an existing issue.",
+                "properties": [
+                    {
+                        "id": "issue_id",
+                        "name": "Issue ID",
+                        "desc": "The ID or key of the issue to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "fields",
+                        "name": "Fields",
+                        "desc": "A dictionary of fields to update with their new values.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "add_comment",
+                "name": "Add Comment",
+                "desc": "Adds a comment to an existing issue.",
+                "properties": [
+                    {
+                        "id": "issue_id",
+                        "name": "Issue ID",
+                        "desc": "The ID or key of the issue to comment on.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "comment",
+                        "name": "Comment",
+                        "desc": "The content of the comment.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "assign_issue",
+                "name": "Assign Issue",
+                "desc": "Assigns an issue to a user.",
+                "properties": [
+                    {
+                        "id": "issue_id",
+                        "name": "Issue ID",
+                        "desc": "The ID or key of the issue to assign.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "assignee",
+                        "name": "Assignee",
+                        "desc": "The username of the person to assign the issue to.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "transition_issue",
+                "name": "Transition Issue",
+                "desc": "Transitions an issue to a new status.",
+                "properties": [
+                    {
+                        "id": "issue_id",
+                        "name": "Issue ID",
+                        "desc": "The ID or key of the issue to transition.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "transition_id",
+                        "name": "Transition ID",
+                        "desc": "The ID of the transition to apply.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "jira.svg"
+    },
+    {
+        "provider": "Intercom",
+        "actions": [
+            {
+                "id": "create_user",
+                "name": "Create User",
+                "desc": "Creates a new user in Intercom.",
+                "properties": [
+                    {
+                        "id": "email",
+                        "name": "Email",
+                        "desc": "The email address of the user.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "name",
+                        "name": "Name",
+                        "desc": "The full name of the user.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "phone",
+                        "name": "Phone",
+                        "desc": "The phone number of the user.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "custom_attributes",
+                        "name": "Custom Attributes",
+                        "desc": "A set of custom attributes to associate with the user.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "update_user",
+                "name": "Update User",
+                "desc": "Updates an existing user's information.",
+                "properties": [
+                    {
+                        "id": "user_id",
+                        "name": "User ID",
+                        "desc": "The unique identifier of the user to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "email",
+                        "name": "Email",
+                        "desc": "The updated email address of the user.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "name",
+                        "name": "Name",
+                        "desc": "The updated full name of the user.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "phone",
+                        "name": "Phone",
+                        "desc": "The updated phone number of the user.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "custom_attributes",
+                        "name": "Custom Attributes",
+                        "desc": "Updated custom attributes for the user.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "add_note",
+                "name": "Add Note",
+                "desc": "Adds a note to a user's profile.",
+                "properties": [
+                    {
+                        "id": "user_id",
+                        "name": "User ID",
+                        "desc": "The unique identifier of the user.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "body",
+                        "name": "Note Body",
+                        "desc": "The content of the note.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "send_message",
+                "name": "Send Message",
+                "desc": "Sends a message to a user.",
+                "properties": [
+                    {
+                        "id": "user_id",
+                        "name": "User ID",
+                        "desc": "The unique identifier of the user.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "message_type",
+                        "name": "Message Type",
+                        "desc": "The type of message: 'in_app' or 'email'.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "subject",
+                        "name": "Subject",
+                        "desc": "The subject of the message (required for emails).",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "body",
+                        "name": "Body",
+                        "desc": "The content of the message.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "add_event",
+                "name": "Add Event",
+                "desc": "Tags a user with a specific event.",
+                "properties": [
+                    {
+                        "id": "user_id",
+                        "name": "User ID",
+                        "desc": "The unique identifier of the user.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "event_name",
+                        "name": "Event Name",
+                        "desc": "The name of the event.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "metadata",
+                        "name": "Metadata",
+                        "desc": "Additional data associated with the event.",
+                        "datatype": "object"
+                    }
+                ]
+            }
+        ],
+        "icon": "intercom.svg"
+    },
+    {
+        "provider": "QuickBooks",
+        "actions": [
+            {
+                "id": "create_invoice",
+                "name": "Create Invoice",
+                "desc": "Creates a new invoice for a customer.",
+                "properties": [
+                    {
+                        "id": "customer_id",
+                        "name": "Customer ID",
+                        "desc": "The ID of the customer to invoice.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "line_items",
+                        "name": "Line Items",
+                        "desc": "An array of line items, each including item ID, quantity, and amount.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "due_date",
+                        "name": "Due Date",
+                        "desc": "The due date for the invoice.",
+                        "datatype": "date"
+                    },
+                    {
+                        "id": "custom_fields",
+                        "name": "Custom Fields",
+                        "desc": "Optional custom fields to include in the invoice.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "create_customer",
+                "name": "Create Customer",
+                "desc": "Adds a new customer to QuickBooks.",
+                "properties": [
+                    {
+                        "id": "display_name",
+                        "name": "Display Name",
+                        "desc": "The display name of the customer.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "email",
+                        "name": "Email",
+                        "desc": "The email address of the customer.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "phone",
+                        "name": "Phone",
+                        "desc": "The phone number of the customer.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "billing_address",
+                        "name": "Billing Address",
+                        "desc": "The billing address of the customer.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "create_bill",
+                "name": "Create Bill",
+                "desc": "Records a new bill from a vendor.",
+                "properties": [
+                    {
+                        "id": "vendor_id",
+                        "name": "Vendor ID",
+                        "desc": "The ID of the vendor.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "line_items",
+                        "name": "Line Items",
+                        "desc": "An array of line items, each including item ID, quantity, and amount.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "bill_date",
+                        "name": "Bill Date",
+                        "desc": "The date of the bill.",
+                        "datatype": "date"
+                    },
+                    {
+                        "id": "due_date",
+                        "name": "Due Date",
+                        "desc": "The due date for the bill.",
+                        "datatype": "date"
+                    }
+                ]
+            },
+            {
+                "id": "create_payment",
+                "name": "Create Payment",
+                "desc": "Records a payment for an invoice.",
+                "properties": [
+                    {
+                        "id": "customer_id",
+                        "name": "Customer ID",
+                        "desc": "The ID of the customer making the payment.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "invoice_id",
+                        "name": "Invoice ID",
+                        "desc": "The ID of the invoice being paid.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "payment_date",
+                        "name": "Payment Date",
+                        "desc": "The date the payment was received.",
+                        "datatype": "date"
+                    },
+                    {
+                        "id": "amount",
+                        "name": "Amount",
+                        "desc": "The amount of the payment.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "payment_method",
+                        "name": "Payment Method",
+                        "desc": "The method of payment (e.g., cash, check, credit card).",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_vendor",
+                "name": "Create Vendor",
+                "desc": "Adds a new vendor to QuickBooks.",
+                "properties": [
+                    {
+                        "id": "display_name",
+                        "name": "Display Name",
+                        "desc": "The display name of the vendor.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "email",
+                        "name": "Email",
+                        "desc": "The email address of the vendor.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "phone",
+                        "name": "Phone",
+                        "desc": "The phone number of the vendor.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "billing_address",
+                        "name": "Billing Address",
+                        "desc": "The billing address of the vendor.",
+                        "datatype": "object"
+                    }
+                ]
+            }
+        ],
+        "icon": "quickbooks.svg"
+    },
+    {
+        "provider": "Xero",
+        "actions": [
+            {
+                "id": "create_invoice",
+                "name": "Create Invoice",
+                "desc": "Creates a new sales invoice.",
+                "properties": [
+                    {
+                        "id": "contact_id",
+                        "name": "Contact ID",
+                        "desc": "The ID of the contact to invoice.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "line_items",
+                        "name": "Line Items",
+                        "desc": "An array of line items, each including description, quantity, unit amount, and account code.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "due_date",
+                        "name": "Due Date",
+                        "desc": "The due date for the invoice.",
+                        "datatype": "date"
+                    },
+                    {
+                        "id": "status",
+                        "name": "Status",
+                        "desc": "The status of the invoice (e.g., DRAFT, SUBMITTED, AUTHORISED).",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "reference",
+                        "name": "Reference",
+                        "desc": "Additional reference number for the invoice.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_contact",
+                "name": "Create Contact",
+                "desc": "Adds a new contact.",
+                "properties": [
+                    {
+                        "id": "name",
+                        "name": "Name",
+                        "desc": "The name of the contact.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "email_address",
+                        "name": "Email Address",
+                        "desc": "The email address of the contact.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "phone_number",
+                        "name": "Phone Number",
+                        "desc": "The phone number of the contact.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "address",
+                        "name": "Address",
+                        "desc": "The address details of the contact.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "create_bill",
+                "name": "Create Bill",
+                "desc": "Records a new bill (accounts payable).",
+                "properties": [
+                    {
+                        "id": "contact_id",
+                        "name": "Contact ID",
+                        "desc": "The ID of the supplier.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "line_items",
+                        "name": "Line Items",
+                        "desc": "An array of line items, each including description, quantity, unit amount, and account code.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "due_date",
+                        "name": "Due Date",
+                        "desc": "The due date for the bill.",
+                        "datatype": "date"
+                    },
+                    {
+                        "id": "status",
+                        "name": "Status",
+                        "desc": "The status of the bill (e.g., DRAFT, SUBMITTED, AUTHORISED).",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "reference",
+                        "name": "Reference",
+                        "desc": "Additional reference number for the bill.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_payment",
+                "name": "Create Payment",
+                "desc": "Records a payment for an invoice or bill.",
+                "properties": [
+                    {
+                        "id": "invoice_id",
+                        "name": "Invoice ID",
+                        "desc": "The ID of the invoice or bill being paid.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "account_id",
+                        "name": "Account ID",
+                        "desc": "The ID of the bank account the payment is made from.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "amount",
+                        "name": "Amount",
+                        "desc": "The amount of the payment.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "date",
+                        "name": "Date",
+                        "desc": "The date the payment was made.",
+                        "datatype": "date"
+                    },
+                    {
+                        "id": "reference",
+                        "name": "Reference",
+                        "desc": "Additional reference for the payment.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_bank_transaction",
+                "name": "Create Bank Transaction",
+                "desc": "Creates a new bank transaction.",
+                "properties": [
+                    {
+                        "id": "type",
+                        "name": "Transaction Type",
+                        "desc": "The type of bank transaction (e.g., RECEIVE, SPEND).",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "contact_id",
+                        "name": "Contact ID",
+                        "desc": "The ID of the contact associated with the transaction.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "line_items",
+                        "name": "Line Items",
+                        "desc": "An array of line items, each including description, quantity, unit amount, and account code.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "bank_account_id",
+                        "name": "Bank Account ID",
+                        "desc": "The ID of the bank account for the transaction.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "date",
+                        "name": "Date",
+                        "desc": "The date of the transaction.",
+                        "datatype": "date"
+                    },
+                    {
+                        "id": "reference",
+                        "name": "Reference",
+                        "desc": "Additional reference for the transaction.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "xero.svg"
+    },
+    {
+        "provider": "ClickUp",
+        "actions": [
+            {
+                "id": "create_task",
+                "name": "Create Task",
+                "desc": "Creates a new task within a specified list.",
+                "properties": [
+                    {
+                        "id": "list_id",
+                        "name": "List ID",
+                        "desc": "The ID of the list where the task will be created.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "name",
+                        "name": "Task Name",
+                        "desc": "The name of the task.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "description",
+                        "name": "Description",
+                        "desc": "A detailed description of the task.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "assignees",
+                        "name": "Assignees",
+                        "desc": "An array of user IDs to assign to the task.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "status",
+                        "name": "Status",
+                        "desc": "The status of the task (e.g., 'to do', 'in progress', 'done').",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "priority",
+                        "name": "Priority",
+                        "desc": "The priority level of the task: 1 (Urgent), 2 (High), 3 (Normal), 4 (Low).",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "due_date",
+                        "name": "Due Date",
+                        "desc": "The due date and time for the task.",
+                        "datatype": "datetime"
+                    }
+                ]
+            },
+            {
+                "id": "update_task",
+                "name": "Update Task",
+                "desc": "Updates an existing task's details.",
+                "properties": [
+                    {
+                        "id": "task_id",
+                        "name": "Task ID",
+                        "desc": "The ID of the task to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "name",
+                        "name": "Task Name",
+                        "desc": "The updated name of the task.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "description",
+                        "name": "Description",
+                        "desc": "The updated description of the task.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "assignees",
+                        "name": "Assignees",
+                        "desc": "An array of user IDs to assign to the task.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "status",
+                        "name": "Status",
+                        "desc": "The updated status of the task.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "priority",
+                        "name": "Priority",
+                        "desc": "The updated priority level of the task.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "due_date",
+                        "name": "Due Date",
+                        "desc": "The updated due date and time for the task.",
+                        "datatype": "datetime"
+                    }
+                ]
+            },
+            {
+                "id": "add_comment",
+                "name": "Add Comment",
+                "desc": "Adds a comment to a specified task.",
+                "properties": [
+                    {
+                        "id": "task_id",
+                        "name": "Task ID",
+                        "desc": "The ID of the task to comment on.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "comment_text",
+                        "name": "Comment Text",
+                        "desc": "The content of the comment.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_list",
+                "name": "Create List",
+                "desc": "Creates a new list within a specified folder.",
+                "properties": [
+                    {
+                        "id": "folder_id",
+                        "name": "Folder ID",
+                        "desc": "The ID of the folder where the list will be created.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "name",
+                        "name": "List Name",
+                        "desc": "The name of the new list.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "content",
+                        "name": "Content",
+                        "desc": "Additional content or description for the list.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "add_time_tracking",
+                "name": "Add Time Tracking",
+                "desc": "Adds a time entry to a specified task.",
+                "properties": [
+                    {
+                        "id": "task_id",
+                        "name": "Task ID",
+                        "desc": "The ID of the task to add time tracking to.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "start_time",
+                        "name": "Start Time",
+                        "desc": "The start time of the time entry.",
+                        "datatype": "datetime"
+                    },
+                    {
+                        "id": "end_time",
+                        "name": "End Time",
+                        "desc": "The end time of the time entry.",
+                        "datatype": "datetime"
+                    },
+                    {
+                        "id": "description",
+                        "name": "Description",
+                        "desc": "A description of the time entry.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "clickup.png"
+    },
+    {
+        "provider": "Freshdesk",
+        "actions": [
+            {
+                "id": "create_ticket",
+                "name": "Create Ticket",
+                "desc": "Creates a new support ticket.",
+                "properties": [
+                    {
+                        "id": "email",
+                        "name": "Email",
+                        "desc": "The email address of the requester.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "subject",
+                        "name": "Subject",
+                        "desc": "The subject of the ticket.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "description",
+                        "name": "Description",
+                        "desc": "The detailed description of the issue.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "priority",
+                        "name": "Priority",
+                        "desc": "Priority level: 1 (Low), 2 (Medium), 3 (High), 4 (Urgent).",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "status",
+                        "name": "Status",
+                        "desc": "Status code: 2 (Open), 3 (Pending), 4 (Resolved), 5 (Closed).",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "group_id",
+                        "name": "Group ID",
+                        "desc": "ID of the group to assign the ticket to.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "responder_id",
+                        "name": "Responder ID",
+                        "desc": "ID of the agent to assign the ticket to.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "tags",
+                        "name": "Tags",
+                        "desc": "Tags associated with the ticket.",
+                        "datatype": "array"
+                    }
+                ]
+            },
+            {
+                "id": "update_ticket",
+                "name": "Update Ticket",
+                "desc": "Updates an existing ticket's details.",
+                "properties": [
+                    {
+                        "id": "ticket_id",
+                        "name": "Ticket ID",
+                        "desc": "The ID of the ticket to update.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "status",
+                        "name": "Status",
+                        "desc": "New status code for the ticket.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "priority",
+                        "name": "Priority",
+                        "desc": "New priority level for the ticket.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "group_id",
+                        "name": "Group ID",
+                        "desc": "ID of the new group to assign the ticket to.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "responder_id",
+                        "name": "Responder ID",
+                        "desc": "ID of the new agent to assign the ticket to.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "tags",
+                        "name": "Tags",
+                        "desc": "Updated tags for the ticket.",
+                        "datatype": "array"
+                    }
+                ]
+            },
+            {
+                "id": "add_note",
+                "name": "Add Note",
+                "desc": "Adds a note to an existing ticket.",
+                "properties": [
+                    {
+                        "id": "ticket_id",
+                        "name": "Ticket ID",
+                        "desc": "The ID of the ticket to add a note to.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "body",
+                        "name": "Note Body",
+                        "desc": "The content of the note.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "private",
+                        "name": "Private",
+                        "desc": "Whether the note is private (true) or public (false).",
+                        "datatype": "boolean"
+                    }
+                ]
+            },
+            {
+                "id": "assign_ticket",
+                "name": "Assign Ticket",
+                "desc": "Assigns a ticket to a specific agent or group.",
+                "properties": [
+                    {
+                        "id": "ticket_id",
+                        "name": "Ticket ID",
+                        "desc": "The ID of the ticket to assign.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "responder_id",
+                        "name": "Responder ID",
+                        "desc": "ID of the agent to assign the ticket to.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "group_id",
+                        "name": "Group ID",
+                        "desc": "ID of the group to assign the ticket to.",
+                        "datatype": "number"
+                    }
+                ]
+            },
+            {
+                "id": "close_ticket",
+                "name": "Close Ticket",
+                "desc": "Closes an existing ticket.",
+                "properties": [
+                    {
+                        "id": "ticket_id",
+                        "name": "Ticket ID",
+                        "desc": "The ID of the ticket to close.",
+                        "datatype": "number"
+                    }
+                ]
+            }
+        ],
+        "icon": "freshdesk.webp"
+    },
+    {
+        "provider": "Google Sheets",
+        "actions": [
+            {
+                "id": "create_spreadsheet",
+                "name": "Create Spreadsheet",
+                "desc": "Creates a new spreadsheet with a specified title.",
+                "properties": [
+                    {
+                        "id": "title",
+                        "name": "Title",
+                        "desc": "The title of the new spreadsheet.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "add_sheet",
+                "name": "Add Sheet",
+                "desc": "Adds a new sheet to an existing spreadsheet.",
+                "properties": [
+                    {
+                        "id": "spreadsheet_id",
+                        "name": "Spreadsheet ID",
+                        "desc": "The ID of the spreadsheet to add the sheet to.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "sheet_title",
+                        "name": "Sheet Title",
+                        "desc": "The title of the new sheet.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "append_row",
+                "name": "Append Row",
+                "desc": "Appends a row of values to the end of a sheet.",
+                "properties": [
+                    {
+                        "id": "spreadsheet_id",
+                        "name": "Spreadsheet ID",
+                        "desc": "The ID of the spreadsheet.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "range",
+                        "name": "Range",
+                        "desc": "The A1 notation of a range to search for a logical table of data.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "values",
+                        "name": "Values",
+                        "desc": "An array of values to append as a new row.",
+                        "datatype": "array"
+                    }
+                ]
+            },
+            {
+                "id": "update_cell",
+                "name": "Update Cell",
+                "desc": "Updates a specific cell in a sheet.",
+                "properties": [
+                    {
+                        "id": "spreadsheet_id",
+                        "name": "Spreadsheet ID",
+                        "desc": "The ID of the spreadsheet.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "range",
+                        "name": "Range",
+                        "desc": "The A1 notation of the cell to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "value",
+                        "name": "Value",
+                        "desc": "The value to set in the specified cell.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "read_range",
+                "name": "Read Range",
+                "desc": "Reads values from a specified range in a sheet.",
+                "properties": [
+                    {
+                        "id": "spreadsheet_id",
+                        "name": "Spreadsheet ID",
+                        "desc": "The ID of the spreadsheet.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "range",
+                        "name": "Range",
+                        "desc": "The A1 notation of the range to read.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "google-sheets.png"
+    },
+    {
+        "provider": "Microsoft Excel",
+        "actions": [
+            {
+                "id": "create_workbook",
+                "name": "Create Workbook",
+                "desc": "Creates a new Excel workbook.",
+                "properties": [
+                    {
+                        "id": "title",
+                        "name": "Title",
+                        "desc": "The title of the new workbook.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "add_worksheet",
+                "name": "Add Worksheet",
+                "desc": "Adds a new worksheet to an existing workbook.",
+                "properties": [
+                    {
+                        "id": "workbook_id",
+                        "name": "Workbook ID",
+                        "desc": "The ID of the workbook.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "sheet_name",
+                        "name": "Sheet Name",
+                        "desc": "The name of the new worksheet.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "insert_row",
+                "name": "Insert Row",
+                "desc": "Inserts a new row into a worksheet.",
+                "properties": [
+                    {
+                        "id": "workbook_id",
+                        "name": "Workbook ID",
+                        "desc": "The ID of the workbook.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "worksheet_name",
+                        "name": "Worksheet Name",
+                        "desc": "The name of the worksheet.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "row_index",
+                        "name": "Row Index",
+                        "desc": "The index at which to insert the new row.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "values",
+                        "name": "Values",
+                        "desc": "An array of values to insert into the new row.",
+                        "datatype": "array"
+                    }
+                ]
+            },
+            {
+                "id": "update_cell",
+                "name": "Update Cell",
+                "desc": "Updates the value of a specific cell.",
+                "properties": [
+                    {
+                        "id": "workbook_id",
+                        "name": "Workbook ID",
+                        "desc": "The ID of the workbook.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "worksheet_name",
+                        "name": "Worksheet Name",
+                        "desc": "The name of the worksheet.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "cell_address",
+                        "name": "Cell Address",
+                        "desc": "The address of the cell (e.g., 'A1').",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "value",
+                        "name": "Value",
+                        "desc": "The new value for the cell.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "read_range",
+                "name": "Read Range",
+                "desc": "Reads values from a specified range in a worksheet.",
+                "properties": [
+                    {
+                        "id": "workbook_id",
+                        "name": "Workbook ID",
+                        "desc": "The ID of the workbook.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "worksheet_name",
+                        "name": "Worksheet Name",
+                        "desc": "The name of the worksheet.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "range",
+                        "name": "Range",
+                        "desc": "The A1 notation of the range to read.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "delete_row",
+                "name": "Delete Row",
+                "desc": "Deletes a specific row from a worksheet.",
+                "properties": [
+                    {
+                        "id": "workbook_id",
+                        "name": "Workbook ID",
+                        "desc": "The ID of the workbook.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "worksheet_name",
+                        "name": "Worksheet Name",
+                        "desc": "The name of the worksheet.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "row_index",
+                        "name": "Row Index",
+                        "desc": "The index of the row to delete.",
+                        "datatype": "number"
+                    }
+                ]
+            }
+        ],
+        "icon": "microsoft_excel.jpg"
+    },
+    {
+        "provider": "Calendly",
+        "actions": [
+            {
+                "id": "create_one_off_event_type",
+                "name": "Create One-Off Event Type",
+                "desc": "Creates a one-time event type for scheduling.",
+                "properties": [
+                    {
+                        "id": "host",
+                        "name": "Host URI",
+                        "desc": "The URI of the user hosting the event.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "name",
+                        "name": "Event Name",
+                        "desc": "The name of the event.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "duration",
+                        "name": "Duration",
+                        "desc": "Duration of the event in minutes.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "date_setting",
+                        "name": "Date Setting",
+                        "desc": "Settings for the event's date and time.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "create_single_use_scheduling_link",
+                "name": "Create Single-Use Scheduling Link",
+                "desc": "Generates a one-time scheduling link for an event type.",
+                "properties": [
+                    {
+                        "id": "owner",
+                        "name": "Owner URI",
+                        "desc": "The URI of the user owning the event type.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "max_event_count",
+                        "name": "Max Event Count",
+                        "desc": "Maximum number of events that can be scheduled with this link.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "owner_type",
+                        "name": "Owner Type",
+                        "desc": "Type of the owner (e.g., 'User').",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "event_type",
+                        "name": "Event Type URI",
+                        "desc": "The URI of the event type.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "list_event_types",
+                "name": "List Event Types",
+                "desc": "Retrieves a list of event types for a user.",
+                "properties": [
+                    {
+                        "id": "user",
+                        "name": "User URI",
+                        "desc": "The URI of the user whose event types are to be listed.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "list_event_type_available_times",
+                "name": "List Event Type Available Times",
+                "desc": "Retrieves available times for a specific event type.",
+                "properties": [
+                    {
+                        "id": "event_type",
+                        "name": "Event Type URI",
+                        "desc": "The URI of the event type.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "start_time",
+                        "name": "Start Time",
+                        "desc": "The start of the time range to check for availability.",
+                        "datatype": "datetime"
+                    },
+                    {
+                        "id": "end_time",
+                        "name": "End Time",
+                        "desc": "The end of the time range to check for availability.",
+                        "datatype": "datetime"
+                    }
+                ]
+            },
+            {
+                "id": "list_scheduled_events",
+                "name": "List Scheduled Events",
+                "desc": "Retrieves a list of scheduled events for a user.",
+                "properties": [
+                    {
+                        "id": "user",
+                        "name": "User URI",
+                        "desc": "The URI of the user whose scheduled events are to be listed.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "status",
+                        "name": "Status",
+                        "desc": "Filter events by status (e.g., 'active', 'canceled').",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "calendly.png"
+    },
+    {
+        "provider": "DocuSign",
+        "actions": [
+            {
+                "id": "create_envelope",
+                "name": "Create Envelope",
+                "desc": "Creates a new envelope to send documents for signature.",
+                "properties": [
+                    {
+                        "id": "email_subject",
+                        "name": "Email Subject",
+                        "desc": "The subject line of the email sent to recipients.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "email_blurb",
+                        "name": "Email Blurb",
+                        "desc": "The body of the email sent to recipients.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "status",
+                        "name": "Status",
+                        "desc": "The status of the envelope: 'created' (draft) or 'sent'.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "documents",
+                        "name": "Documents",
+                        "desc": "An array of documents to include in the envelope, each with 'documentBase64', 'name', 'fileExtension', and 'documentId'.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "recipients",
+                        "name": "Recipients",
+                        "desc": "An object specifying the recipients, including 'signers', 'carbonCopies', etc.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "add_recipient",
+                "name": "Add Recipient",
+                "desc": "Adds a recipient to an existing envelope.",
+                "properties": [
+                    {
+                        "id": "envelope_id",
+                        "name": "Envelope ID",
+                        "desc": "The ID of the envelope to which the recipient will be added.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "recipient",
+                        "name": "Recipient",
+                        "desc": "An object specifying the recipient details, such as 'name', 'email', 'recipientId', and 'routingOrder'.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "send_envelope",
+                "name": "Send Envelope",
+                "desc": "Sends a draft envelope to the specified recipients.",
+                "properties": [
+                    {
+                        "id": "envelope_id",
+                        "name": "Envelope ID",
+                        "desc": "The ID of the envelope to send.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "get_envelope_status",
+                "name": "Get Envelope Status",
+                "desc": "Retrieves the current status of an envelope.",
+                "properties": [
+                    {
+                        "id": "envelope_id",
+                        "name": "Envelope ID",
+                        "desc": "The ID of the envelope whose status is to be retrieved.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "download_document",
+                "name": "Download Document",
+                "desc": "Downloads a specific document from an envelope.",
+                "properties": [
+                    {
+                        "id": "envelope_id",
+                        "name": "Envelope ID",
+                        "desc": "The ID of the envelope containing the document.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "document_id",
+                        "name": "Document ID",
+                        "desc": "The ID of the document to download.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "docusign.webp"
+    },
+    {
+        "provider": "Stripe",
+        "actions": [
+            {
+                "id": "create_customer",
+                "name": "Create Customer",
+                "desc": "Creates a new customer object to store information for recurring charges and subscriptions.",
+                "properties": [
+                    {
+                        "id": "name",
+                        "name": "Name",
+                        "desc": "The customer's full name.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "email",
+                        "name": "Email",
+                        "desc": "The customer's email address.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "description",
+                        "name": "Description",
+                        "desc": "An arbitrary string attached to the customer for display purposes.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "phone",
+                        "name": "Phone",
+                        "desc": "The customer's phone number.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "address",
+                        "name": "Address",
+                        "desc": "The customer's address, including line1, city, state, postal_code, and country.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "create_charge",
+                "name": "Create Charge",
+                "desc": "Creates a new charge object to collect payment from a customer.",
+                "properties": [
+                    {
+                        "id": "amount",
+                        "name": "Amount",
+                        "desc": "Amount to charge in the smallest currency unit (e.g., cents).",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "currency",
+                        "name": "Currency",
+                        "desc": "Three-letter ISO currency code (e.g., 'usd').",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "customer",
+                        "name": "Customer ID",
+                        "desc": "The ID of an existing customer to charge.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "source",
+                        "name": "Payment Source",
+                        "desc": "A payment source to be charged, such as a card token or ID.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "description",
+                        "name": "Description",
+                        "desc": "An arbitrary string attached to the charge for display purposes.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_subscription",
+                "name": "Create Subscription",
+                "desc": "Creates a new subscription for a customer.",
+                "properties": [
+                    {
+                        "id": "customer",
+                        "name": "Customer ID",
+                        "desc": "The ID of the customer to subscribe.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "items",
+                        "name": "Subscription Items",
+                        "desc": "An array of subscription items, each with a price ID and quantity.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "trial_period_days",
+                        "name": "Trial Period Days",
+                        "desc": "Number of trial period days before the subscription starts.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "default_payment_method",
+                        "name": "Default Payment Method",
+                        "desc": "ID of the default payment method for the subscription.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_refund",
+                "name": "Create Refund",
+                "desc": "Initiates a refund for an existing charge.",
+                "properties": [
+                    {
+                        "id": "charge",
+                        "name": "Charge ID",
+                        "desc": "The ID of the charge to refund.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "amount",
+                        "name": "Amount",
+                        "desc": "Amount to refund in the smallest currency unit (optional).",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "reason",
+                        "name": "Reason",
+                        "desc": "Reason for the refund (e.g., 'requested_by_customer').",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_payment_intent",
+                "name": "Create Payment Intent",
+                "desc": "Creates a PaymentIntent object to initiate a payment flow.",
+                "properties": [
+                    {
+                        "id": "amount",
+                        "name": "Amount",
+                        "desc": "Amount intended to be collected in the smallest currency unit.",
+                        "datatype": "number"
+                    },
+                    {
+                        "id": "currency",
+                        "name": "Currency",
+                        "desc": "Three-letter ISO currency code (e.g., 'usd').",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "customer",
+                        "name": "Customer ID",
+                        "desc": "The ID of an existing customer (optional).",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "payment_method",
+                        "name": "Payment Method ID",
+                        "desc": "ID of the payment method to attach to the PaymentIntent (optional).",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "confirmation_method",
+                        "name": "Confirmation Method",
+                        "desc": "Method of confirmation ('automatic' or 'manual').",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "confirm",
+                        "name": "Confirm",
+                        "desc": "Whether to confirm the PaymentIntent immediately.",
+                        "datatype": "boolean"
+                    }
+                ]
+            }
+        ],
+        "icon": "stripe.webp"
+    },
+    {
+        "provider": "Shopify",
+        "actions": [
+            {
+                "id": "create_product",
+                "name": "Create Product",
+                "desc": "Creates a new product in the Shopify store.",
+                "properties": [
+                    {
+                        "id": "title",
+                        "name": "Title",
+                        "desc": "The name of the product.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "body_html",
+                        "name": "Description",
+                        "desc": "The description of the product in HTML format.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "vendor",
+                        "name": "Vendor",
+                        "desc": "The name of the product vendor.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "product_type",
+                        "name": "Product Type",
+                        "desc": "The category of the product.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "tags",
+                        "name": "Tags",
+                        "desc": "An array of tags associated with the product.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "variants",
+                        "name": "Variants",
+                        "desc": "An array of variant objects for the product.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "images",
+                        "name": "Images",
+                        "desc": "An array of image URLs for the product.",
+                        "datatype": "array"
+                    }
+                ]
+            },
+            {
+                "id": "create_order",
+                "name": "Create Order",
+                "desc": "Creates a new order in the Shopify store.",
+                "properties": [
+                    {
+                        "id": "email",
+                        "name": "Email",
+                        "desc": "The email address of the customer.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "line_items",
+                        "name": "Line Items",
+                        "desc": "An array of line item objects representing the products in the order.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "billing_address",
+                        "name": "Billing Address",
+                        "desc": "The billing address for the order.",
+                        "datatype": "object"
+                    },
+                    {
+                        "id": "shipping_address",
+                        "name": "Shipping Address",
+                        "desc": "The shipping address for the order.",
+                        "datatype": "object"
+                    },
+                    {
+                        "id": "financial_status",
+                        "name": "Financial Status",
+                        "desc": "The financial status of the order (e.g., 'paid', 'pending').",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "fulfillment_status",
+                        "name": "Fulfillment Status",
+                        "desc": "The fulfillment status of the order (e.g., 'fulfilled', 'unfulfilled').",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_customer",
+                "name": "Create Customer",
+                "desc": "Creates a new customer in the Shopify store.",
+                "properties": [
+                    {
+                        "id": "first_name",
+                        "name": "First Name",
+                        "desc": "The customer's first name.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "last_name",
+                        "name": "Last Name",
+                        "desc": "The customer's last name.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "email",
+                        "name": "Email",
+                        "desc": "The customer's email address.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "phone",
+                        "name": "Phone",
+                        "desc": "The customer's phone number.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "addresses",
+                        "name": "Addresses",
+                        "desc": "An array of address objects associated with the customer.",
+                        "datatype": "array"
+                    },
+                    {
+                        "id": "tags",
+                        "name": "Tags",
+                        "desc": "An array of tags associated with the customer.",
+                        "datatype": "array"
+                    }
+                ]
+            },
+            {
+                "id": "add_metafield",
+                "name": "Add Metafield",
+                "desc": "Adds a custom metafield to a Shopify resource.",
+                "properties": [
+                    {
+                        "id": "owner_resource",
+                        "name": "Owner Resource",
+                        "desc": "The type of resource to which the metafield will be attached (e.g., 'product', 'order', 'customer').",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "owner_id",
+                        "name": "Owner ID",
+                        "desc": "The ID of the resource to which the metafield will be attached.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "namespace",
+                        "name": "Namespace",
+                        "desc": "A container for a group of metafields.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "key",
+                        "name": "Key",
+                        "desc": "The key for the metafield.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "value",
+                        "name": "Value",
+                        "desc": "The value of the metafield.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "value_type",
+                        "name": "Value Type",
+                        "desc": "The type of the metafield value (e.g., 'string', 'integer').",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "update_inventory",
+                "name": "Update Inventory",
+                "desc": "Updates the inventory level for a specific product variant.",
+                "properties": [
+                    {
+                        "id": "inventory_item_id",
+                        "name": "Inventory Item ID",
+                        "desc": "The ID of the inventory item to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "location_id",
+                        "name": "Location ID",
+                        "desc": "The ID of the location where the inventory is stocked.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "available",
+                        "name": "Available",
+                        "desc": "The new available inventory quantity.",
+                        "datatype": "number"
+                    }
+                ]
+            }
+        ],
+        "icon": "shopify.svg"
+    },
+    {
+        "provider": "ZoomInfo",
+        "actions": [
+            {
+                "id": "search_contacts",
+                "name": "Search Contacts",
+                "desc": "Searches for contacts based on specified criteria.",
+                "properties": [
+                    {
+                        "id": "first_name",
+                        "name": "First Name",
+                        "desc": "The first name of the contact.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "last_name",
+                        "name": "Last Name",
+                        "desc": "The last name of the contact.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "company",
+                        "name": "Company",
+                        "desc": "The company the contact is associated with.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "location",
+                        "name": "Location",
+                        "desc": "The location of the contact.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "job_title",
+                        "name": "Job Title",
+                        "desc": "The job title of the contact.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "enrich_contact",
+                "name": "Enrich Contact",
+                "desc": "Enriches a contact's information based on provided details.",
+                "properties": [
+                    {
+                        "id": "email",
+                        "name": "Email",
+                        "desc": "The email address of the contact.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "phone",
+                        "name": "Phone",
+                        "desc": "The phone number of the contact.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "linkedin_url",
+                        "name": "LinkedIn URL",
+                        "desc": "The LinkedIn profile URL of the contact.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "search_companies",
+                "name": "Search Companies",
+                "desc": "Searches for companies based on specified criteria.",
+                "properties": [
+                    {
+                        "id": "company_name",
+                        "name": "Company Name",
+                        "desc": "The name of the company.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "domain",
+                        "name": "Domain",
+                        "desc": "The website domain of the company.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "location",
+                        "name": "Location",
+                        "desc": "The location of the company.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "industry",
+                        "name": "Industry",
+                        "desc": "The industry the company operates in.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "enrich_company",
+                "name": "Enrich Company",
+                "desc": "Enriches a company's information based on provided details.",
+                "properties": [
+                    {
+                        "id": "domain",
+                        "name": "Domain",
+                        "desc": "The website domain of the company.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "company_name",
+                        "name": "Company Name",
+                        "desc": "The name of the company.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "linkedin_url",
+                        "name": "LinkedIn URL",
+                        "desc": "The LinkedIn profile URL of the company.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "get_usage",
+                "name": "Get Usage",
+                "desc": "Retrieves the current API usage statistics.",
+                "properties": []
+            }
+        ],
+        "icon": "zoominfo.svg"
+    },
+    {
+        "provider": "Twilio",
+        "actions": [
+            {
+                "id": "send_sms",
+                "name": "Send SMS",
+                "desc": "Sends an SMS message to a specified phone number.",
+                "properties": [
+                    {
+                        "id": "to",
+                        "name": "To",
+                        "desc": "The recipient's phone number in E.164 format.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "from",
+                        "name": "From",
+                        "desc": "A Twilio phone number in your account.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "body",
+                        "name": "Message Body",
+                        "desc": "The content of the SMS message.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "make_call",
+                "name": "Make Call",
+                "desc": "Initiates a voice call to a specified phone number.",
+                "properties": [
+                    {
+                        "id": "to",
+                        "name": "To",
+                        "desc": "The recipient's phone number in E.164 format.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "from",
+                        "name": "From",
+                        "desc": "A Twilio phone number in your account.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "twiml",
+                        "name": "TwiML",
+                        "desc": "Twilio Markup Language instructions for the call.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_conference",
+                "name": "Create Conference",
+                "desc": "Creates a new conference call room.",
+                "properties": [
+                    {
+                        "id": "friendly_name",
+                        "name": "Friendly Name",
+                        "desc": "A user-defined name for the conference.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "record",
+                        "name": "Record",
+                        "desc": "Whether to record the conference.",
+                        "datatype": "boolean"
+                    }
+                ]
+            },
+            {
+                "id": "add_participant",
+                "name": "Add Participant",
+                "desc": "Adds a participant to an existing conference.",
+                "properties": [
+                    {
+                        "id": "conference_sid",
+                        "name": "Conference SID",
+                        "desc": "The unique identifier for the conference.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "to",
+                        "name": "To",
+                        "desc": "The phone number of the participant to add.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "from",
+                        "name": "From",
+                        "desc": "A Twilio phone number in your account.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "send_verification_code",
+                "name": "Send Verification Code",
+                "desc": "Sends a verification code to a user's phone number.",
+                "properties": [
+                    {
+                        "id": "to",
+                        "name": "To",
+                        "desc": "The recipient's phone number in E.164 format.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "channel",
+                        "name": "Channel",
+                        "desc": "The channel to use for verification (e.g., 'sms', 'call').",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "check_verification_code",
+                "name": "Check Verification Code",
+                "desc": "Checks if the provided verification code is correct.",
+                "properties": [
+                    {
+                        "id": "to",
+                        "name": "To",
+                        "desc": "The recipient's phone number in E.164 format.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "code",
+                        "name": "Code",
+                        "desc": "The verification code provided by the user.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "twilio.svg"
+    },
+    {
+        "provider": "Monday.com",
+        "actions": [
+            {
+                "id": "create_item",
+                "name": "Create Item",
+                "desc": "Creates a new item in a specified board and group.",
+                "properties": [
+                    {
+                        "id": "board_id",
+                        "name": "Board ID",
+                        "desc": "The ID of the board where the item will be created.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "group_id",
+                        "name": "Group ID",
+                        "desc": "The ID of the group within the board.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "item_name",
+                        "name": "Item Name",
+                        "desc": "The name of the new item.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "column_values",
+                        "name": "Column Values",
+                        "desc": "A JSON object of column values to set for the item.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "update_item",
+                "name": "Update Item",
+                "desc": "Updates column values of an existing item.",
+                "properties": [
+                    {
+                        "id": "item_id",
+                        "name": "Item ID",
+                        "desc": "The ID of the item to update.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "column_values",
+                        "name": "Column Values",
+                        "desc": "A JSON object of column values to update.",
+                        "datatype": "object"
+                    }
+                ]
+            },
+            {
+                "id": "create_board",
+                "name": "Create Board",
+                "desc": "Creates a new board.",
+                "properties": [
+                    {
+                        "id": "board_name",
+                        "name": "Board Name",
+                        "desc": "The name of the new board.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "board_kind",
+                        "name": "Board Kind",
+                        "desc": "The kind of board: public or private.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "workspace_id",
+                        "name": "Workspace ID",
+                        "desc": "The ID of the workspace where the board will be created.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "create_group",
+                "name": "Create Group",
+                "desc": "Creates a new group in a specified board.",
+                "properties": [
+                    {
+                        "id": "board_id",
+                        "name": "Board ID",
+                        "desc": "The ID of the board where the group will be created.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "group_name",
+                        "name": "Group Name",
+                        "desc": "The name of the new group.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "add_subscriber",
+                "name": "Add Subscriber",
+                "desc": "Adds a user as a subscriber to a board.",
+                "properties": [
+                    {
+                        "id": "board_id",
+                        "name": "Board ID",
+                        "desc": "The ID of the board.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "user_id",
+                        "name": "User ID",
+                        "desc": "The ID of the user to add as a subscriber.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "monday.svg"
+    },
+    {
+        "provider": "Box",
+        "actions": [
+            {
+                "id": "create_folder",
+                "name": "Create Folder",
+                "desc": "Creates a new folder within a specified parent folder.",
+                "properties": [
+                    {
+                        "id": "name",
+                        "name": "Folder Name",
+                        "desc": "The name of the new folder.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "parent_id",
+                        "name": "Parent Folder ID",
+                        "desc": "The ID of the parent folder where the new folder will be created. Use '0' for the root folder.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "upload_file",
+                "name": "Upload File",
+                "desc": "Uploads a file to a specified folder.",
+                "properties": [
+                    {
+                        "id": "file_name",
+                        "name": "File Name",
+                        "desc": "The name of the file to be uploaded.",
+                        "datatype": "string"
+                    },
+                    {
+                        "id": "file_content",
+                        "name": "File Content",
+                        "desc": "The binary content of the file.",
+                        "datatype": "binary"
+                    },
+                    {
+                        "id": "parent_id",
+                        "name": "Parent Folder ID",
+                        "desc": "The ID of the folder where the file will be uploaded. Use '0' for the root folder.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "download_file",
+                "name": "Download File",
+                "desc": "Downloads a file by its ID.",
+                "properties": [
+                    {
+                        "id": "file_id",
+                        "name": "File ID",
+                        "desc": "The ID of the file to download.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "delete_file",
+                "name": "Delete File",
+                "desc": "Deletes a file by its ID.",
+                "properties": [
+                    {
+                        "id": "file_id",
+                        "name": "File ID",
+                        "desc": "The ID of the file to delete.",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            {
+                "id": "delete_folder",
+                "name": "Delete Folder",
+                "desc": "Deletes a folder by its ID.",
+                "properties": [
+                    {
+                        "id": "folder_id",
+                        "name": "Folder ID",
+                        "desc": "The ID of the folder to delete.",
+                        "datatype": "string"
+                    }
+                ]
+            }
+        ],
+        "icon": "box.svg"
+    }
+]
