@@ -88,8 +88,6 @@
     addSkill
   });
 
-  let surfaceRef = $state<any>(null);
-
   function handleBrowserSelect(item: any, context: any) {
     showBrowser = false;
     if (externalOnSelect) {
@@ -120,7 +118,7 @@
 
 <div class="vjs-ai-agent-root" style="width: 100vw; height: 100vh; display: flex; flex-direction: column; position: relative">
   <SurfaceProvider>
-    <SurfaceComponent {url} viewOptions={getViewOptions()} {renderOptions} {modelOptions} bind:this={surfaceRef}>
+    <SurfaceComponent {url} viewOptions={getViewOptions()} {renderOptions} {modelOptions}>
       <ButtonBar />
       <SurfacePopup selector=".vjs-next-step-picker">
 		  {#snippet popup(vertex, model, ui, hide)}
